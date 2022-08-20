@@ -23,14 +23,14 @@ GBSDataCar <- readRDS("data/DadosGBSCaroline.rds")
 ## Controle de qualidade de Marcadores SNPs - MAF
 
 ```{r MAF, eval = F}
-Freq <- colMeans(GBSDataCar, na.rm = T)
+Freq <- colMeans(GBSDataCar, na.rm = T)/2
 
 MAF <- Freq
 for(i in 1:length(MAF)){
   if(MAF[i] >0.5){MAF[i] <- 1 - MAF[i]} else {MAF[i] <- MAF[i]}
 }
 
-GBSDataCar2 <- as.data.frame(GBSDataCar[,(MAF >= sqrt(1/nrow(GBSDataCar2)))])
+GBSDataCar2 <- as.data.frame(GBSDataCar[,(MAF >= sqrt(1/nrow(GBSDataCar)))])
 
 saveRDS(GBSDataCar2, file = here::here("data", "DadosGBSCaroline2.rds"))
 ```
