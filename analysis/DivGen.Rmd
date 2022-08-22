@@ -237,6 +237,9 @@ SHIndPhen <- SHInd[ , colnames(SHInd)%like%"Pheno"]
 
 SHRelPhen <- (SHIndPhen - SHBAG)*100/SHBAG
 
+write.table(SHRelPhen, file = here::here("output", "GanhoRelativoShannonWeaverPhen.csv"),
+            quote = F, sep = ",")
+
 SHSelPhen <- data.frame(Method = colnames(SHRelPhen),
                         SHMeanImprov = colMeans(SHRelPhen, na.rm = TRUE),
                         SHsd = apply(SHRelPhen, FUN = sd, na.rm = TRUE, MARGIN = 2),
@@ -267,6 +270,8 @@ SHIndGen <- SHInd[ , colnames(SHInd)%like%"Geno"]
 
 SHRelGen <- (SHIndGen - SHBAG)*100/SHBAG
 
+write.table(SHRelGen, file = here::here("output", "GanhoRelativoShannonWeaverGen.csv"),
+            quote = F, sep = ",")
 SHSelGen <- data.frame(Method = colnames(SHRelGen),
                         SHMeanImprov = colMeans(SHRelGen, na.rm = TRUE),
                         SHsd = apply(SHRelGen, FUN = sd, na.rm = TRUE, MARGIN = 2),
@@ -539,7 +544,7 @@ write.table(Table3SH, file = here::here("output", "Shannon-WeaverCCFinalQuantInd
 ```
 
 
-#### **Table 8.** Shannon-Weaver indexes for Cassava quantitative traits of the Bank of germplasm and 12 nuclear core collections.
+#### **Table 8.** Shannon-Weaver indexes for Cassava quantitative traits of the Bank of germplasm and 3 nuclear core collections.
 ```{r Table 8, echo = FALSE}
 Table3SH %>% reactable(defaultPageSize = 16, columns = list(
   BAG = colDef(format = colFormat(digits = 3, locales = "en-US")),
@@ -593,7 +598,7 @@ SHInd <- as.data.frame(rbind(Table3SH, Table4SH))
 ```
 
 
-#### **Table 9.** Shannon-Weaver indexes for Cassava quality traits of the Bank of germplasm and 12 nuclear core collections.
+#### **Table 9.** Shannon-Weaver indexes for Cassava quality traits of the Bank of germplasm and 3 nuclear core collections.
 ```{r Table 9, echo = FALSE}
 Table4SH %>% reactable(defaultPageSize = 15, columns = list(
   BAG = colDef(format = colFormat(digits = 3, locales = "en-US")),
@@ -609,6 +614,9 @@ SHBAG <- SHInd[, "BAG"]
 SHIndFinal <- SHInd[ , !colnames(SHInd)%like%"BAG"]
 
 SHRelFinal <- (SHIndFinal - SHBAG)*100/SHBAG
+
+write.table(SHRelFinal, file = here::here("output", "GanhoRelativoShannonWeaverFinal.csv"),
+            quote = F, sep = ",")
 
 SHSelFinal <- data.frame(Method = colnames(SHRelFinal),
                         SHMeanImprov = colMeans(SHRelFinal, na.rm = TRUE),
