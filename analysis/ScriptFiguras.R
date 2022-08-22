@@ -56,6 +56,14 @@ ggarrange(VD1, VD3, VD2, ncol = 1, labels = "AUTO", heights = c(2,1.3,2))
 dev.off()
 
 
+### Venn Diagrams DivGen Rmd
+tiff(filename = "output/Figures/VennDiagramFinal.tiff", res = 400, units = "cm",
+     compression = "lzw", width = 12, height = 12)
+VDFinal
+dev.off()
+
+
+
 ### PCA accumulated variances
 tiff(filename = "output/Figures/PCAVar.tiff", res = 400, units = "cm",
      compression = "lzw", width = 10, height = 8)
