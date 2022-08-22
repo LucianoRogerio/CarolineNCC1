@@ -396,7 +396,7 @@ div.tocify {
 
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
-<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span>
 </button>
 </p>
 <div id="workflowr-report" class="collapse">
@@ -405,7 +405,7 @@ div.tocify {
 <a data-toggle="tab" href="#summary">Summary</a>
 </li>
 <li>
-<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
+<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -417,7 +417,7 @@ div.tocify {
 <strong>Last updated:</strong> 2022-08-22
 </p>
 <p>
-<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>CarolineNCC1/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
@@ -433,12 +433,12 @@ This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a> analysi
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges"> <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
+<div id="strongRMarkdownfilestronguncommittedchanges" class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+<p>The R Markdown file has unstaged changes. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
 </div>
 </div>
 </div>
@@ -505,16 +505,16 @@ This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a> analysi
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomLucianoRogerioCarolineNCC1tree657eb2a6c23c4ecb8eee60487ffe13882559961dtargetblank657eb2aa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/LucianoRogerio/CarolineNCC1/tree/657eb2a6c23c4ecb8eee60487ffe13882559961d" target="_blank">657eb2a</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomLucianoRogerioCarolineNCC1treee883ed91c1b38dd59d53f9bc21f5d8de5fba0d81targetblanke883ed9a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/LucianoRogerio/CarolineNCC1/tree/e883ed91c1b38dd59d53f9bc21f5d8de5fba0d81" target="_blank">e883ed9</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomLucianoRogerioCarolineNCC1tree657eb2a6c23c4ecb8eee60487ffe13882559961dtargetblank657eb2aa" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomLucianoRogerioCarolineNCC1treee883ed91c1b38dd59d53f9bc21f5d8de5fba0d81targetblanke883ed9a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/LucianoRogerio/CarolineNCC1/tree/657eb2a6c23c4ecb8eee60487ffe13882559961d" target="_blank">657eb2a</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/LucianoRogerio/CarolineNCC1/tree/e883ed91c1b38dd59d53f9bc21f5d8de5fba0d81" target="_blank">e883ed9</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -531,14 +531,14 @@ Ignored files:
     Ignored:    output/CarDarwinMatrix.txt
     Ignored:    output/Figures/
 
+Untracked files:
+    Untracked:  output/ClonesSelCCFinal.txt
+    Untracked:  output/ClonesSelCCGenCoreHunter.txt
+    Untracked:  output/ClonesSelCCGenDARwin.txt
+    Untracked:  output/ClonesSelCCPhen.txt
+
 Unstaged changes:
-    Modified:   output/AllDataCCCaroline.RDS
-    Modified:   output/AllDataCCFinalCaroline.RDS
-    Modified:   output/KappaIndex.csv
-    Modified:   output/Shannon-WeaverCCFinalQualIndex.csv
-    Modified:   output/Shannon-WeaverCCFinalQuantIndex.csv
-    Modified:   output/Shannon-WeaverCCQualIndex.csv
-    Modified:   output/Shannon-WeaverCCQuantIndex.csv
+    Modified:   analysis/DivGen.Rmd
 
 </code></pre>
 <p>
@@ -577,6 +577,57 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/LucianoRogerio/CarolineNCC1/blob/3cd790c08ac627e590339241d8e2cde8c31024a8/analysis/DivGen.Rmd" target="_blank">3cd790c</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-08-22
+</td>
+<td>
+Fixed issues with the Nuclear core collections estimation
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/LucianoRogerio/CarolineNCC1/3cd790c08ac627e590339241d8e2cde8c31024a8/docs/DivGen.html" target="_blank">3cd790c</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-08-22
+</td>
+<td>
+Fixed issues with the Nuclear core collections estimation
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/LucianoRogerio/CarolineNCC1/5908b141018f75efa3da30153ed620fe14f09dbf/docs/DivGen.html" target="_blank">5908b14</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-08-22
+</td>
+<td>
+Fixed issues with the Nuclear core collections estimation
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1191,6 +1242,28 @@ Date
 <tbody>
 <tr>
 <td>
+<a href="https://github.com/LucianoRogerio/CarolineNCC1/blob/3cd790c08ac627e590339241d8e2cde8c31024a8/docs/figure/DivGen.Rmd/Fig 1-1.png" target="_blank">3cd790c</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-08-22
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/LucianoRogerio/CarolineNCC1/blob/5908b141018f75efa3da30153ed620fe14f09dbf/docs/figure/DivGen.Rmd/Fig 1-1.png" target="_blank">5908b14</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-08-22
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://github.com/LucianoRogerio/CarolineNCC1/blob/636bc47297f70e5bd2dd7b64cac41a59734f1a98/docs/figure/DivGen.Rmd/Fig 1-1.png" target="_blank">636bc47</a>
 </td>
 <td>
@@ -1216,6 +1289,183 @@ LucianoRogerio
 VD1 &lt;- ggvenn(VennDPNC, fill_color = c(&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;),
               fill_alpha = 0.6, set_name_size = 5)
 
+sink(file = here::here(&quot;output&quot;, &quot;ClonesSelCCPhen.txt&quot;))
+VennDPNC</code></pre>
+<pre><code>$`GW/CH`
+  [1] &quot;2019g-08-01&quot;            &quot;2019g-08-42&quot;            &quot;2019g-08-44&quot;           
+  [4] &quot;2019g-08-64&quot;            &quot;7909-04&quot;                &quot;AF-BR-11-52-25&quot;        
+  [7] &quot;AF-BR-11-53-01&quot;         &quot;Aipim Brasilia&quot;         &quot;BGM-0010&quot;              
+ [10] &quot;BGM-0025&quot;               &quot;BGM-0031&quot;               &quot;BGM-0042&quot;              
+ [13] &quot;BGM-0049&quot;               &quot;BGM-0050&quot;               &quot;BGM-0053&quot;              
+ [16] &quot;BGM-0054&quot;               &quot;BGM-0058&quot;               &quot;BGM-0075&quot;              
+ [19] &quot;BGM-0094&quot;               &quot;BGM-0097&quot;               &quot;BGM-0113-RcxRos&quot;       
+ [22] &quot;BGM-0126&quot;               &quot;BGM-0131&quot;               &quot;BGM-0145&quot;              
+ [25] &quot;BGM-0175&quot;               &quot;BGM-0177&quot;               &quot;BGM-0181&quot;              
+ [28] &quot;BGM-0183&quot;               &quot;BGM-0207&quot;               &quot;BGM-0211&quot;              
+ [31] &quot;BGM-0213&quot;               &quot;BGM-0232&quot;               &quot;BGM-0254&quot;              
+ [34] &quot;BGM-0267&quot;               &quot;BGM-0343&quot;               &quot;BGM-0352&quot;              
+ [37] &quot;BGM-0360&quot;               &quot;BGM-0364&quot;               &quot;BGM-0390&quot;              
+ [40] &quot;BGM-0413&quot;               &quot;BGM-0424&quot;               &quot;BGM-0436&quot;              
+ [43] &quot;BGM-0473&quot;               &quot;BGM-0500&quot;               &quot;BGM-0541&quot;              
+ [46] &quot;BGM-0587&quot;               &quot;BGM-0623&quot;               &quot;BGM-0678&quot;              
+ [49] &quot;BGM-0702&quot;               &quot;BGM-0745&quot;               &quot;BGM-0752&quot;              
+ [52] &quot;BGM-0760&quot;               &quot;BGM-0779&quot;               &quot;BGM-0780-B&quot;            
+ [55] &quot;BGM-0793&quot;               &quot;BGM-0821&quot;               &quot;BGM-0823&quot;              
+ [58] &quot;BGM-0834&quot;               &quot;BGM-0845&quot;               &quot;BGM-0870&quot;              
+ [61] &quot;BGM-0879&quot;               &quot;BGM-0885&quot;               &quot;BGM-0893&quot;              
+ [64] &quot;BGM-0895&quot;               &quot;BGM-0929&quot;               &quot;BGM-0936&quot;              
+ [67] &quot;BGM-0960&quot;               &quot;BGM-0961&quot;               &quot;BGM-0967&quot;              
+ [70] &quot;BGM-0977&quot;               &quot;BGM-0986&quot;               &quot;BGM-1025&quot;              
+ [73] &quot;BGM-1029&quot;               &quot;BGM-1043&quot;               &quot;BGM-1115&quot;              
+ [76] &quot;BGM-1124&quot;               &quot;BGM-1130&quot;               &quot;BGM-1137&quot;              
+ [79] &quot;BGM-1164&quot;               &quot;BGM-1176-M&quot;             &quot;BGM-1178&quot;              
+ [82] &quot;BGM-1190&quot;               &quot;BGM-1191&quot;               &quot;BGM-1198&quot;              
+ [85] &quot;BGM-1218&quot;               &quot;BGM-1236&quot;               &quot;BGM-1252&quot;              
+ [88] &quot;BGM-1253&quot;               &quot;BGM-1255&quot;               &quot;BGM-1257&quot;              
+ [91] &quot;BGM-1270&quot;               &quot;BGM-1295&quot;               &quot;BGM-1303&quot;              
+ [94] &quot;BGM-1305&quot;               &quot;BGM-1321&quot;               &quot;BGM-1327&quot;              
+ [97] &quot;BGM-1355&quot;               &quot;BGM-1390&quot;               &quot;BGM-1393&quot;              
+[100] &quot;BGM-1398&quot;               &quot;BGM-1423&quot;               &quot;BGM-1433&quot;              
+[103] &quot;BGM-1452&quot;               &quot;BGM-1485&quot;               &quot;BGM-1496&quot;              
+[106] &quot;BGM-1502&quot;               &quot;BGM-1502-M&quot;             &quot;BGM-1569&quot;              
+[109] &quot;BGM-1623&quot;               &quot;BGM-1660&quot;               &quot;BGM-1668&quot;              
+[112] &quot;BGM-1686&quot;               &quot;BGM-1695&quot;               &quot;BGM-1696&quot;              
+[115] &quot;BGM-1723&quot;               &quot;BGM-1741&quot;               &quot;BGM-1749&quot;              
+[118] &quot;BGM-1753&quot;               &quot;BGM-1759&quot;               &quot;BGM-1759(B)&quot;           
+[121] &quot;BGM-1828&quot;               &quot;BGM-1832&quot;               &quot;BGM-1876&quot;              
+[124] &quot;BGM-1942&quot;               &quot;BGM-1999&quot;               &quot;BGM-2048&quot;              
+[127] &quot;BGM-2055&quot;               &quot;BGM-2062&quot;               &quot;BGM-2082&quot;              
+[130] &quot;BGM-2091&quot;               &quot;BGM-2102&quot;               &quot;BGM-2103&quot;              
+[133] &quot;BGM-2114&quot;               &quot;BGM-2117&quot;               &quot;BGM-2123&quot;              
+[136] &quot;BGM-2162&quot;               &quot;BGM-2180&quot;               &quot;BGM-2211&quot;              
+[139] &quot;BGM-2212&quot;               &quot;BGM-2230&quot;               &quot;BGM-2261&quot;              
+[142] &quot;BGM-2283&quot;               &quot;BGM-2294&quot;               &quot;BGM-2326&quot;              
+[145] &quot;BGM-2337&quot;               &quot;BGM-2339&quot;               &quot;BGM-2344&quot;              
+[148] &quot;BGM-2346&quot;               &quot;BGM-2353&quot;               &quot;BGM-2358&quot;              
+[151] &quot;BR-11-34-41&quot;            &quot;BRS-396&quot;                &quot;BRS-Formosa&quot;           
+[154] &quot;BRS-Formosa-Tetra&quot;      &quot;BRS-Tapioqueira&quot;        &quot;Conquista-1&quot;           
+[157] &quot;CPAFRO-05&quot;              &quot;CPAFRO-06&quot;              &quot;CPAFRO-09&quot;             
+[160] &quot;CPAFRO-27&quot;              &quot;CPAFRO-35&quot;              &quot;Guaira-Falsa&quot;          
+[163] &quot;Platina&quot;                &quot;Rangel-Fadel&quot;           &quot;Sao Francisco de Paula&quot;
+[166] &quot;Secundina&quot;             
+
+$CH
+  [1] &quot;2019g-08-44&quot;            &quot;2019g-08-51&quot;            &quot;2019g-08-67&quot;           
+  [4] &quot;7909-04&quot;                &quot;AF-BR-11-52-19&quot;         &quot;AF-BR-11-52-25&quot;        
+  [7] &quot;AF-BR-11-53-01&quot;         &quot;AF-BR-11-53-26&quot;         &quot;Aipim Brasilia&quot;        
+ [10] &quot;BGM-0010&quot;               &quot;BGM-0018&quot;               &quot;BGM-0020&quot;              
+ [13] &quot;BGM-0031&quot;               &quot;BGM-0042&quot;               &quot;BGM-0050&quot;              
+ [16] &quot;BGM-0053&quot;               &quot;BGM-0054&quot;               &quot;BGM-0057&quot;              
+ [19] &quot;BGM-0058&quot;               &quot;BGM-0075&quot;               &quot;BGM-0094&quot;              
+ [22] &quot;BGM-0097&quot;               &quot;BGM-0113-RcxRos&quot;        &quot;BGM-0131&quot;              
+ [25] &quot;BGM-0177&quot;               &quot;BGM-0181&quot;               &quot;BGM-0183&quot;              
+ [28] &quot;BGM-0207&quot;               &quot;BGM-0211&quot;               &quot;BGM-0213&quot;              
+ [31] &quot;BGM-0232&quot;               &quot;BGM-0254&quot;               &quot;BGM-0267&quot;              
+ [34] &quot;BGM-0277&quot;               &quot;BGM-0295&quot;               &quot;BGM-0343&quot;              
+ [37] &quot;BGM-0360&quot;               &quot;BGM-0364&quot;               &quot;BGM-0405&quot;              
+ [40] &quot;BGM-0424&quot;               &quot;BGM-0500&quot;               &quot;BGM-0541&quot;              
+ [43] &quot;BGM-0587&quot;               &quot;BGM-0610&quot;               &quot;BGM-0623&quot;              
+ [46] &quot;BGM-0668&quot;               &quot;BGM-0669&quot;               &quot;BGM-0678&quot;              
+ [49] &quot;BGM-0702&quot;               &quot;BGM-0706&quot;               &quot;BGM-0752&quot;              
+ [52] &quot;BGM-0760&quot;               &quot;BGM-0779&quot;               &quot;BGM-0780-B&quot;            
+ [55] &quot;BGM-0821&quot;               &quot;BGM-0823&quot;               &quot;BGM-0834&quot;              
+ [58] &quot;BGM-0870&quot;               &quot;BGM-0878&quot;               &quot;BGM-0879&quot;              
+ [61] &quot;BGM-0882&quot;               &quot;BGM-0885&quot;               &quot;BGM-0893&quot;              
+ [64] &quot;BGM-0895&quot;               &quot;BGM-0896&quot;               &quot;BGM-0901&quot;              
+ [67] &quot;BGM-0920&quot;               &quot;BGM-0929&quot;               &quot;BGM-0936&quot;              
+ [70] &quot;BGM-0960&quot;               &quot;BGM-0961&quot;               &quot;BGM-0967&quot;              
+ [73] &quot;BGM-0977&quot;               &quot;BGM-0986&quot;               &quot;BGM-0993&quot;              
+ [76] &quot;BGM-1029&quot;               &quot;BGM-1040&quot;               &quot;BGM-1115&quot;              
+ [79] &quot;BGM-1130&quot;               &quot;BGM-1137&quot;               &quot;BGM-1150&quot;              
+ [82] &quot;BGM-1158&quot;               &quot;BGM-1163&quot;               &quot;BGM-1164&quot;              
+ [85] &quot;BGM-1176-M&quot;             &quot;BGM-1178&quot;               &quot;BGM-1190&quot;              
+ [88] &quot;BGM-1191&quot;               &quot;BGM-1198&quot;               &quot;BGM-1218&quot;              
+ [91] &quot;BGM-1236&quot;               &quot;BGM-1252&quot;               &quot;BGM-1253&quot;              
+ [94] &quot;BGM-1255&quot;               &quot;BGM-1257&quot;               &quot;BGM-1295&quot;              
+ [97] &quot;BGM-1303&quot;               &quot;BGM-1319&quot;               &quot;BGM-1327&quot;              
+[100] &quot;BGM-1355&quot;               &quot;BGM-1361&quot;               &quot;BGM-1390&quot;              
+[103] &quot;BGM-1393&quot;               &quot;BGM-1452&quot;               &quot;BGM-1485&quot;              
+[106] &quot;BGM-1496&quot;               &quot;BGM-1502&quot;               &quot;BGM-1502-M&quot;            
+[109] &quot;BGM-1508&quot;               &quot;BGM-1523&quot;               &quot;BGM-1569&quot;              
+[112] &quot;BGM-1583&quot;               &quot;BGM-1660&quot;               &quot;BGM-1668&quot;              
+[115] &quot;BGM-1695&quot;               &quot;BGM-1696&quot;               &quot;BGM-1723&quot;              
+[118] &quot;BGM-1741&quot;               &quot;BGM-1759&quot;               &quot;BGM-1759(B)&quot;           
+[121] &quot;BGM-1828&quot;               &quot;BGM-1876&quot;               &quot;BGM-1942&quot;              
+[124] &quot;BGM-2029&quot;               &quot;BGM-2034&quot;               &quot;BGM-2048&quot;              
+[127] &quot;BGM-2055&quot;               &quot;BGM-2082&quot;               &quot;BGM-2091&quot;              
+[130] &quot;BGM-2103&quot;               &quot;BGM-2111&quot;               &quot;BGM-2114&quot;              
+[133] &quot;BGM-2117&quot;               &quot;BGM-2119&quot;               &quot;BGM-2180&quot;              
+[136] &quot;BGM-2208&quot;               &quot;BGM-2230&quot;               &quot;BGM-2260&quot;              
+[139] &quot;BGM-2284&quot;               &quot;BGM-2294&quot;               &quot;BGM-2326&quot;              
+[142] &quot;BGM-2337&quot;               &quot;BGM-2339&quot;               &quot;BGM-2344&quot;              
+[145] &quot;BGM-2346&quot;               &quot;BGM-2352&quot;               &quot;BGM-2354&quot;              
+[148] &quot;BGM-2358&quot;               &quot;BR-11-34-41&quot;            &quot;BRS-396&quot;               
+[151] &quot;BRS-Formosa&quot;            &quot;BRS-Formosa-Tetra&quot;      &quot;BRS-Tapioqueira&quot;       
+[154] &quot;Conquista-1&quot;            &quot;CPAFRO-05&quot;              &quot;CPAFRO-06&quot;             
+[157] &quot;CPAFRO-09&quot;              &quot;CPAFRO-27&quot;              &quot;CPAFRO-33&quot;             
+[160] &quot;CPAFRO-35&quot;              &quot;Guaira-Falsa&quot;           &quot;Maragojipe&quot;            
+[163] &quot;Platina&quot;                &quot;Rangel-Fadel&quot;           &quot;Sao Francisco de Paula&quot;
+[166] &quot;Secundina&quot;             
+
+$`GW/MLST`
+  [1] &quot;2019g-08-11&quot;       &quot;2019g-08-29&quot;       &quot;2019g-08-40&quot;      
+  [4] &quot;2019g-08-44&quot;       &quot;2019g-08-56&quot;       &quot;7909-04&quot;          
+  [7] &quot;AF-BR-11-53-01&quot;    &quot;Aipim Brasilia&quot;    &quot;AM-Jaeve-RN&quot;      
+ [10] &quot;BGM-0010&quot;          &quot;BGM-0016&quot;          &quot;BGM-0031&quot;         
+ [13] &quot;BGM-0049&quot;          &quot;BGM-0050&quot;          &quot;BGM-0053&quot;         
+ [16] &quot;BGM-0054&quot;          &quot;BGM-0058&quot;          &quot;BGM-0075&quot;         
+ [19] &quot;BGM-0076&quot;          &quot;BGM-0077&quot;          &quot;BGM-0089&quot;         
+ [22] &quot;BGM-0094&quot;          &quot;BGM-0113-RcxRos&quot;   &quot;BGM-0149&quot;         
+ [25] &quot;BGM-0158&quot;          &quot;BGM-0181&quot;          &quot;BGM-0183&quot;         
+ [28] &quot;BGM-0205&quot;          &quot;BGM-0207&quot;          &quot;BGM-0211&quot;         
+ [31] &quot;BGM-0221&quot;          &quot;BGM-0252&quot;          &quot;BGM-0254&quot;         
+ [34] &quot;BGM-0267&quot;          &quot;BGM-0307&quot;          &quot;BGM-0320&quot;         
+ [37] &quot;BGM-0360&quot;          &quot;BGM-0365&quot;          &quot;BGM-0380&quot;         
+ [40] &quot;BGM-0390&quot;          &quot;BGM-0419&quot;          &quot;BGM-0424&quot;         
+ [43] &quot;BGM-0436&quot;          &quot;BGM-0473&quot;          &quot;BGM-0492&quot;         
+ [46] &quot;BGM-0544&quot;          &quot;BGM-0557&quot;          &quot;BGM-0585&quot;         
+ [49] &quot;BGM-0587&quot;          &quot;BGM-0672&quot;          &quot;BGM-0685&quot;         
+ [52] &quot;BGM-0699&quot;          &quot;BGM-0702&quot;          &quot;BGM-0726&quot;         
+ [55] &quot;BGM-0752&quot;          &quot;BGM-0780-B&quot;        &quot;BGM-0793&quot;         
+ [58] &quot;BGM-0823&quot;          &quot;BGM-0873&quot;          &quot;BGM-0878&quot;         
+ [61] &quot;BGM-0882&quot;          &quot;BGM-0885&quot;          &quot;BGM-0890&quot;         
+ [64] &quot;BGM-0895&quot;          &quot;BGM-0901&quot;          &quot;BGM-0919&quot;         
+ [67] &quot;BGM-0947&quot;          &quot;BGM-0960&quot;          &quot;BGM-0961&quot;         
+ [70] &quot;BGM-0975&quot;          &quot;BGM-0986&quot;          &quot;BGM-0992&quot;         
+ [73] &quot;BGM-1015&quot;          &quot;BGM-1040&quot;          &quot;BGM-1073&quot;         
+ [76] &quot;BGM-1130&quot;          &quot;BGM-1133&quot;          &quot;BGM-1137&quot;         
+ [79] &quot;BGM-1141&quot;          &quot;BGM-1143&quot;          &quot;BGM-1159&quot;         
+ [82] &quot;BGM-1164&quot;          &quot;BGM-1178&quot;          &quot;BGM-1190&quot;         
+ [85] &quot;BGM-1191&quot;          &quot;BGM-1212&quot;          &quot;BGM-1224&quot;         
+ [88] &quot;BGM-1249&quot;          &quot;BGM-1253&quot;          &quot;BGM-1255&quot;         
+ [91] &quot;BGM-1303&quot;          &quot;BGM-1305&quot;          &quot;BGM-1315&quot;         
+ [94] &quot;BGM-1325&quot;          &quot;BGM-1327&quot;          &quot;BGM-1355&quot;         
+ [97] &quot;BGM-1362&quot;          &quot;BGM-1388&quot;          &quot;BGM-1390&quot;         
+[100] &quot;BGM-1393&quot;          &quot;BGM-1398&quot;          &quot;BGM-1423&quot;         
+[103] &quot;BGM-1424&quot;          &quot;BGM-1450&quot;          &quot;BGM-1452&quot;         
+[106] &quot;BGM-1497&quot;          &quot;BGM-1502&quot;          &quot;BGM-1502-M&quot;       
+[109] &quot;BGM-1569&quot;          &quot;BGM-1583&quot;          &quot;BGM-1588&quot;         
+[112] &quot;BGM-1621&quot;          &quot;BGM-1632&quot;          &quot;BGM-1660&quot;         
+[115] &quot;BGM-1695&quot;          &quot;BGM-1696&quot;          &quot;BGM-1702&quot;         
+[118] &quot;BGM-1741&quot;          &quot;BGM-1753&quot;          &quot;BGM-1760&quot;         
+[121] &quot;BGM-1822&quot;          &quot;BGM-1828&quot;          &quot;BGM-1830&quot;         
+[124] &quot;BGM-1840&quot;          &quot;BGM-2034&quot;          &quot;BGM-2047&quot;         
+[127] &quot;BGM-2048&quot;          &quot;BGM-2055&quot;          &quot;BGM-2058&quot;         
+[130] &quot;BGM-2060&quot;          &quot;BGM-2063&quot;          &quot;BGM-2065&quot;         
+[133] &quot;BGM-2071&quot;          &quot;BGM-2085&quot;          &quot;BGM-2101&quot;         
+[136] &quot;BGM-2103&quot;          &quot;BGM-2108&quot;          &quot;BGM-2123&quot;         
+[139] &quot;BGM-2162&quot;          &quot;BGM-2180&quot;          &quot;BGM-2208&quot;         
+[142] &quot;BGM-2211&quot;          &quot;BGM-2212&quot;          &quot;BGM-2216&quot;         
+[145] &quot;BGM-2230&quot;          &quot;BGM-2233&quot;          &quot;BGM-2260&quot;         
+[148] &quot;BGM-2284&quot;          &quot;BGM-2290&quot;          &quot;BGM-2294&quot;         
+[151] &quot;BGM-2337&quot;          &quot;BGM-2346&quot;          &quot;BGM-2358&quot;         
+[154] &quot;BR-11-34-41&quot;       &quot;BRS-396&quot;           &quot;BRS-Formosa&quot;      
+[157] &quot;BRS-Formosa-Tetra&quot; &quot;BRS-Jari&quot;          &quot;CPAFRO-04&quot;        
+[160] &quot;CPAFRO-05&quot;         &quot;CPAFRO-06&quot;         &quot;CPAFRO-09&quot;        
+[163] &quot;CPAFRO-24&quot;         &quot;CPAFRO-33&quot;         &quot;CPAFRO-35&quot;        
+[166] &quot;CPAFRO-40&quot;        </code></pre>
+<pre class="r"><code>sink()
+
 VennDGNC1 &lt;- list(
   `MR/SH` = rownames(SelCC)[SelCC$`MR/SH` == 1],
   `CE/SH` = rownames(SelCC)[SelCC$`CE/SH` == 1],
@@ -1224,12 +1474,315 @@ VennDGNC1 &lt;- list(
 VD2 &lt;- ggvenn(VennDGNC1, fill_color = c(&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;, &quot;yellow&quot;),
               fill_alpha = 0.6, set_name_size = 5)
 
+sink(file = here::here(&quot;output&quot;, &quot;ClonesSelCCGenCoreHunter.txt&quot;))
+VennDGNC1</code></pre>
+<pre><code>$`MR/SH`
+  [1] &quot;BGM-0004&quot;     &quot;BGM-0016&quot;     &quot;BGM-0017&quot;     &quot;BGM-0020&quot;     &quot;BGM-0021&quot;    
+  [6] &quot;BGM-0076&quot;     &quot;BGM-0098&quot;     &quot;BGM-0111&quot;     &quot;BGM-0117&quot;     &quot;BGM-0119&quot;    
+ [11] &quot;BGM-0143&quot;     &quot;BGM-0153&quot;     &quot;BGM-0184&quot;     &quot;BGM-0189&quot;     &quot;BGM-0222&quot;    
+ [16] &quot;BGM-0239&quot;     &quot;BGM-0247&quot;     &quot;BGM-0260&quot;     &quot;BGM-0267&quot;     &quot;BGM-0282&quot;    
+ [21] &quot;BGM-0294&quot;     &quot;BGM-0297&quot;     &quot;BGM-0327&quot;     &quot;BGM-0340&quot;     &quot;BGM-0357&quot;    
+ [26] &quot;BGM-0366&quot;     &quot;BGM-0383&quot;     &quot;BGM-0413&quot;     &quot;BGM-0423&quot;     &quot;BGM-0437&quot;    
+ [31] &quot;BGM-0461&quot;     &quot;BGM-0472&quot;     &quot;BGM-0484&quot;     &quot;BGM-0494&quot;     &quot;BGM-0495&quot;    
+ [36] &quot;BGM-0509&quot;     &quot;BGM-0514&quot;     &quot;BGM-0521&quot;     &quot;BGM-0540&quot;     &quot;BGM-0606&quot;    
+ [41] &quot;BGM-0609&quot;     &quot;BGM-0610&quot;     &quot;BGM-0639&quot;     &quot;BGM-0661&quot;     &quot;BGM-0665&quot;    
+ [46] &quot;BGM-0685&quot;     &quot;BGM-0697&quot;     &quot;BGM-0752&quot;     &quot;BGM-0779&quot;     &quot;BGM-0806&quot;    
+ [51] &quot;BGM-0829&quot;     &quot;BGM-0830&quot;     &quot;BGM-0842&quot;     &quot;BGM-0859&quot;     &quot;BGM-0872&quot;    
+ [56] &quot;BGM-0878&quot;     &quot;BGM-0885&quot;     &quot;BGM-0893&quot;     &quot;BGM-0903&quot;     &quot;BGM-0912&quot;    
+ [61] &quot;BGM-0934&quot;     &quot;BGM-0944&quot;     &quot;BGM-0945&quot;     &quot;BGM-0948&quot;     &quot;BGM-0953&quot;    
+ [66] &quot;BGM-0962&quot;     &quot;BGM-0967&quot;     &quot;BGM-0976&quot;     &quot;BGM-0977&quot;     &quot;BGM-1037&quot;    
+ [71] &quot;BGM-1043&quot;     &quot;BGM-1068&quot;     &quot;BGM-1082&quot;     &quot;BGM-1088&quot;     &quot;BGM-1110&quot;    
+ [76] &quot;BGM-1116&quot;     &quot;BGM-1118&quot;     &quot;BGM-1120&quot;     &quot;BGM-1140&quot;     &quot;BGM-1142&quot;    
+ [81] &quot;BGM-1191&quot;     &quot;BGM-1195&quot;     &quot;BGM-1236&quot;     &quot;BGM-1248&quot;     &quot;BGM-1254&quot;    
+ [86] &quot;BGM-1257&quot;     &quot;BGM-1266&quot;     &quot;BGM-1283&quot;     &quot;BGM-1288&quot;     &quot;BGM-1308&quot;    
+ [91] &quot;BGM-1309&quot;     &quot;BGM-1362&quot;     &quot;BGM-1363&quot;     &quot;BGM-1379&quot;     &quot;BGM-1393&quot;    
+ [96] &quot;BGM-1395&quot;     &quot;BGM-1398&quot;     &quot;BGM-1401&quot;     &quot;BGM-1402&quot;     &quot;BGM-1415&quot;    
+[101] &quot;BGM-1420&quot;     &quot;BGM-1422&quot;     &quot;BGM-1425&quot;     &quot;BGM-1442&quot;     &quot;BGM-1458&quot;    
+[106] &quot;BGM-1468&quot;     &quot;BGM-1472&quot;     &quot;BGM-1476&quot;     &quot;BGM-1481&quot;     &quot;BGM-1516&quot;    
+[111] &quot;BGM-1521&quot;     &quot;BGM-1543&quot;     &quot;BGM-1566&quot;     &quot;BGM-1585&quot;     &quot;BGM-1603&quot;    
+[116] &quot;BGM-1640&quot;     &quot;BGM-1668&quot;     &quot;BGM-1683&quot;     &quot;BGM-1697&quot;     &quot;BGM-1699&quot;    
+[121] &quot;BGM-1714&quot;     &quot;BGM-1727&quot;     &quot;BGM-1733&quot;     &quot;BGM-1739&quot;     &quot;BGM-1744&quot;    
+[126] &quot;BGM-1751&quot;     &quot;BGM-1757&quot;     &quot;BGM-1766&quot;     &quot;BGM-1782&quot;     &quot;BGM-2022&quot;    
+[131] &quot;BGM-2061&quot;     &quot;BGM-2062&quot;     &quot;BGM-2071&quot;     &quot;BGM-2072&quot;     &quot;BGM-2078&quot;    
+[136] &quot;BGM-2084&quot;     &quot;BGM-2085&quot;     &quot;BGM-2101&quot;     &quot;BGM-2126&quot;     &quot;BGM-2133&quot;    
+[141] &quot;BGM-2135&quot;     &quot;BGM-2140&quot;     &quot;BGM-2162&quot;     &quot;BGM-2171&quot;     &quot;BGM-2182&quot;    
+[146] &quot;BGM-2189&quot;     &quot;BGM-2192&quot;     &quot;BGM-2193&quot;     &quot;BGM-2200&quot;     &quot;BGM-2202&quot;    
+[151] &quot;BGM-2205&quot;     &quot;BGM-2206&quot;     &quot;BGM-2208&quot;     &quot;BGM-2209&quot;     &quot;BGM-2215&quot;    
+[156] &quot;BGM-2218&quot;     &quot;BGM-2249&quot;     &quot;BGM-2253&quot;     &quot;BGM-2294&quot;     &quot;BGM-2342&quot;    
+[161] &quot;BGM-2343&quot;     &quot;BGM-2354&quot;     &quot;BR-11-24-156&quot; &quot;BR-11-34-41&quot;  &quot;BRS-Formosa&quot; 
+[166] &quot;BRS-Kiriris&quot; 
+
+$`CE/SH`
+  [1] &quot;BGM-0004&quot;     &quot;BGM-0016&quot;     &quot;BGM-0017&quot;     &quot;BGM-0020&quot;     &quot;BGM-0021&quot;    
+  [6] &quot;BGM-0043&quot;     &quot;BGM-0062&quot;     &quot;BGM-0076&quot;     &quot;BGM-0098&quot;     &quot;BGM-0117&quot;    
+ [11] &quot;BGM-0119&quot;     &quot;BGM-0143&quot;     &quot;BGM-0184&quot;     &quot;BGM-0212&quot;     &quot;BGM-0222&quot;    
+ [16] &quot;BGM-0239&quot;     &quot;BGM-0247&quot;     &quot;BGM-0260&quot;     &quot;BGM-0267&quot;     &quot;BGM-0282&quot;    
+ [21] &quot;BGM-0294&quot;     &quot;BGM-0297&quot;     &quot;BGM-0357&quot;     &quot;BGM-0364&quot;     &quot;BGM-0366&quot;    
+ [26] &quot;BGM-0383&quot;     &quot;BGM-0413&quot;     &quot;BGM-0423&quot;     &quot;BGM-0428&quot;     &quot;BGM-0461&quot;    
+ [31] &quot;BGM-0472&quot;     &quot;BGM-0484&quot;     &quot;BGM-0494&quot;     &quot;BGM-0509&quot;     &quot;BGM-0514&quot;    
+ [36] &quot;BGM-0521&quot;     &quot;BGM-0540&quot;     &quot;BGM-0598&quot;     &quot;BGM-0606&quot;     &quot;BGM-0609&quot;    
+ [41] &quot;BGM-0610&quot;     &quot;BGM-0639&quot;     &quot;BGM-0661&quot;     &quot;BGM-0685&quot;     &quot;BGM-0697&quot;    
+ [46] &quot;BGM-0752&quot;     &quot;BGM-0779&quot;     &quot;BGM-0821&quot;     &quot;BGM-0829&quot;     &quot;BGM-0830&quot;    
+ [51] &quot;BGM-0834&quot;     &quot;BGM-0842&quot;     &quot;BGM-0859&quot;     &quot;BGM-0872&quot;     &quot;BGM-0878&quot;    
+ [56] &quot;BGM-0885&quot;     &quot;BGM-0893&quot;     &quot;BGM-0934&quot;     &quot;BGM-0944&quot;     &quot;BGM-0948&quot;    
+ [61] &quot;BGM-0953&quot;     &quot;BGM-0962&quot;     &quot;BGM-0975&quot;     &quot;BGM-0976&quot;     &quot;BGM-1037&quot;    
+ [66] &quot;BGM-1043&quot;     &quot;BGM-1082&quot;     &quot;BGM-1088&quot;     &quot;BGM-1110&quot;     &quot;BGM-1116&quot;    
+ [71] &quot;BGM-1118&quot;     &quot;BGM-1140&quot;     &quot;BGM-1142&quot;     &quot;BGM-1185&quot;     &quot;BGM-1195&quot;    
+ [76] &quot;BGM-1236&quot;     &quot;BGM-1248&quot;     &quot;BGM-1254&quot;     &quot;BGM-1257&quot;     &quot;BGM-1266&quot;    
+ [81] &quot;BGM-1272&quot;     &quot;BGM-1283&quot;     &quot;BGM-1288&quot;     &quot;BGM-1298&quot;     &quot;BGM-1308&quot;    
+ [86] &quot;BGM-1309&quot;     &quot;BGM-1329&quot;     &quot;BGM-1362&quot;     &quot;BGM-1363&quot;     &quot;BGM-1373&quot;    
+ [91] &quot;BGM-1379&quot;     &quot;BGM-1388&quot;     &quot;BGM-1389&quot;     &quot;BGM-1395&quot;     &quot;BGM-1398&quot;    
+ [96] &quot;BGM-1401&quot;     &quot;BGM-1402&quot;     &quot;BGM-1415&quot;     &quot;BGM-1420&quot;     &quot;BGM-1425&quot;    
+[101] &quot;BGM-1442&quot;     &quot;BGM-1458&quot;     &quot;BGM-1468&quot;     &quot;BGM-1472&quot;     &quot;BGM-1476&quot;    
+[106] &quot;BGM-1481&quot;     &quot;BGM-1516&quot;     &quot;BGM-1521&quot;     &quot;BGM-1543&quot;     &quot;BGM-1549&quot;    
+[111] &quot;BGM-1563&quot;     &quot;BGM-1585&quot;     &quot;BGM-1604&quot;     &quot;BGM-1618&quot;     &quot;BGM-1640&quot;    
+[116] &quot;BGM-1677&quot;     &quot;BGM-1697&quot;     &quot;BGM-1699&quot;     &quot;BGM-1711&quot;     &quot;BGM-1714&quot;    
+[121] &quot;BGM-1727&quot;     &quot;BGM-1728&quot;     &quot;BGM-1733&quot;     &quot;BGM-1739&quot;     &quot;BGM-1744&quot;    
+[126] &quot;BGM-1751&quot;     &quot;BGM-1757&quot;     &quot;BGM-1766&quot;     &quot;BGM-1828&quot;     &quot;BGM-2022&quot;    
+[131] &quot;BGM-2061&quot;     &quot;BGM-2062&quot;     &quot;BGM-2071&quot;     &quot;BGM-2072&quot;     &quot;BGM-2073&quot;    
+[136] &quot;BGM-2078&quot;     &quot;BGM-2085&quot;     &quot;BGM-2096&quot;     &quot;BGM-2101&quot;     &quot;BGM-2126&quot;    
+[141] &quot;BGM-2133&quot;     &quot;BGM-2135&quot;     &quot;BGM-2140&quot;     &quot;BGM-2148&quot;     &quot;BGM-2162&quot;    
+[146] &quot;BGM-2168&quot;     &quot;BGM-2182&quot;     &quot;BGM-2191&quot;     &quot;BGM-2192&quot;     &quot;BGM-2193&quot;    
+[151] &quot;BGM-2198&quot;     &quot;BGM-2200&quot;     &quot;BGM-2202&quot;     &quot;BGM-2205&quot;     &quot;BGM-2206&quot;    
+[156] &quot;BGM-2208&quot;     &quot;BGM-2209&quot;     &quot;BGM-2253&quot;     &quot;BGM-2294&quot;     &quot;BGM-2342&quot;    
+[161] &quot;BGM-2354&quot;     &quot;BR-11-24-156&quot; &quot;BR-11-34-41&quot;  &quot;BR-11-34-69&quot;  &quot;BRS-Formosa&quot; 
+[166] &quot;CPAFRO-35&quot;   
+
+$`MR/EH`
+  [1] &quot;BGM-0004&quot;     &quot;BGM-0016&quot;     &quot;BGM-0017&quot;     &quot;BGM-0020&quot;     &quot;BGM-0043&quot;    
+  [6] &quot;BGM-0076&quot;     &quot;BGM-0085&quot;     &quot;BGM-0098&quot;     &quot;BGM-0117&quot;     &quot;BGM-0119&quot;    
+ [11] &quot;BGM-0143&quot;     &quot;BGM-0184&quot;     &quot;BGM-0212&quot;     &quot;BGM-0222&quot;     &quot;BGM-0239&quot;    
+ [16] &quot;BGM-0247&quot;     &quot;BGM-0260&quot;     &quot;BGM-0282&quot;     &quot;BGM-0294&quot;     &quot;BGM-0297&quot;    
+ [21] &quot;BGM-0357&quot;     &quot;BGM-0364&quot;     &quot;BGM-0366&quot;     &quot;BGM-0383&quot;     &quot;BGM-0413&quot;    
+ [26] &quot;BGM-0423&quot;     &quot;BGM-0428&quot;     &quot;BGM-0472&quot;     &quot;BGM-0484&quot;     &quot;BGM-0494&quot;    
+ [31] &quot;BGM-0495&quot;     &quot;BGM-0509&quot;     &quot;BGM-0514&quot;     &quot;BGM-0521&quot;     &quot;BGM-0540&quot;    
+ [36] &quot;BGM-0551&quot;     &quot;BGM-0560&quot;     &quot;BGM-0606&quot;     &quot;BGM-0609&quot;     &quot;BGM-0610&quot;    
+ [41] &quot;BGM-0639&quot;     &quot;BGM-0661&quot;     &quot;BGM-0685&quot;     &quot;BGM-0697&quot;     &quot;BGM-0752&quot;    
+ [46] &quot;BGM-0829&quot;     &quot;BGM-0830&quot;     &quot;BGM-0834&quot;     &quot;BGM-0842&quot;     &quot;BGM-0859&quot;    
+ [51] &quot;BGM-0872&quot;     &quot;BGM-0878&quot;     &quot;BGM-0885&quot;     &quot;BGM-0893&quot;     &quot;BGM-0903&quot;    
+ [56] &quot;BGM-0934&quot;     &quot;BGM-0942&quot;     &quot;BGM-0944&quot;     &quot;BGM-0948&quot;     &quot;BGM-0953&quot;    
+ [61] &quot;BGM-0962&quot;     &quot;BGM-0966&quot;     &quot;BGM-0975&quot;     &quot;BGM-1037&quot;     &quot;BGM-1043&quot;    
+ [66] &quot;BGM-1082&quot;     &quot;BGM-1088&quot;     &quot;BGM-1110&quot;     &quot;BGM-1116&quot;     &quot;BGM-1118&quot;    
+ [71] &quot;BGM-1140&quot;     &quot;BGM-1142&quot;     &quot;BGM-1191&quot;     &quot;BGM-1195&quot;     &quot;BGM-1236&quot;    
+ [76] &quot;BGM-1248&quot;     &quot;BGM-1254&quot;     &quot;BGM-1257&quot;     &quot;BGM-1266&quot;     &quot;BGM-1272&quot;    
+ [81] &quot;BGM-1283&quot;     &quot;BGM-1298&quot;     &quot;BGM-1308&quot;     &quot;BGM-1309&quot;     &quot;BGM-1329&quot;    
+ [86] &quot;BGM-1362&quot;     &quot;BGM-1363&quot;     &quot;BGM-1379&quot;     &quot;BGM-1389&quot;     &quot;BGM-1393&quot;    
+ [91] &quot;BGM-1395&quot;     &quot;BGM-1398&quot;     &quot;BGM-1401&quot;     &quot;BGM-1402&quot;     &quot;BGM-1415&quot;    
+ [96] &quot;BGM-1420&quot;     &quot;BGM-1422&quot;     &quot;BGM-1425&quot;     &quot;BGM-1442&quot;     &quot;BGM-1458&quot;    
+[101] &quot;BGM-1472&quot;     &quot;BGM-1476&quot;     &quot;BGM-1516&quot;     &quot;BGM-1521&quot;     &quot;BGM-1543&quot;    
+[106] &quot;BGM-1549&quot;     &quot;BGM-1563&quot;     &quot;BGM-1566&quot;     &quot;BGM-1583&quot;     &quot;BGM-1585&quot;    
+[111] &quot;BGM-1604&quot;     &quot;BGM-1618&quot;     &quot;BGM-1640&quot;     &quot;BGM-1668&quot;     &quot;BGM-1677&quot;    
+[116] &quot;BGM-1678&quot;     &quot;BGM-1697&quot;     &quot;BGM-1699&quot;     &quot;BGM-1711&quot;     &quot;BGM-1714&quot;    
+[121] &quot;BGM-1727&quot;     &quot;BGM-1728&quot;     &quot;BGM-1733&quot;     &quot;BGM-1739&quot;     &quot;BGM-1744&quot;    
+[126] &quot;BGM-1751&quot;     &quot;BGM-1757&quot;     &quot;BGM-1766&quot;     &quot;BGM-2022&quot;     &quot;BGM-2061&quot;    
+[131] &quot;BGM-2062&quot;     &quot;BGM-2071&quot;     &quot;BGM-2072&quot;     &quot;BGM-2073&quot;     &quot;BGM-2078&quot;    
+[136] &quot;BGM-2084&quot;     &quot;BGM-2085&quot;     &quot;BGM-2096&quot;     &quot;BGM-2101&quot;     &quot;BGM-2126&quot;    
+[141] &quot;BGM-2133&quot;     &quot;BGM-2140&quot;     &quot;BGM-2157&quot;     &quot;BGM-2162&quot;     &quot;BGM-2171&quot;    
+[146] &quot;BGM-2182&quot;     &quot;BGM-2191&quot;     &quot;BGM-2192&quot;     &quot;BGM-2193&quot;     &quot;BGM-2194&quot;    
+[151] &quot;BGM-2200&quot;     &quot;BGM-2202&quot;     &quot;BGM-2205&quot;     &quot;BGM-2206&quot;     &quot;BGM-2208&quot;    
+[156] &quot;BGM-2209&quot;     &quot;BGM-2222&quot;     &quot;BGM-2267&quot;     &quot;BGM-2294&quot;     &quot;BGM-2342&quot;    
+[161] &quot;BGM-2354&quot;     &quot;BR-11-24-156&quot; &quot;BR-11-34-41&quot;  &quot;BR-11-34-69&quot;  &quot;BRS-Formosa&quot; 
+[166] &quot;CPAFRO-35&quot;   
+
+$`CE/EH`
+  [1] &quot;BGM-0004&quot;     &quot;BGM-0016&quot;     &quot;BGM-0017&quot;     &quot;BGM-0020&quot;     &quot;BGM-0021&quot;    
+  [6] &quot;BGM-0043&quot;     &quot;BGM-0062&quot;     &quot;BGM-0076&quot;     &quot;BGM-0098&quot;     &quot;BGM-0117&quot;    
+ [11] &quot;BGM-0119&quot;     &quot;BGM-0143&quot;     &quot;BGM-0184&quot;     &quot;BGM-0212&quot;     &quot;BGM-0222&quot;    
+ [16] &quot;BGM-0239&quot;     &quot;BGM-0247&quot;     &quot;BGM-0260&quot;     &quot;BGM-0267&quot;     &quot;BGM-0282&quot;    
+ [21] &quot;BGM-0294&quot;     &quot;BGM-0297&quot;     &quot;BGM-0357&quot;     &quot;BGM-0364&quot;     &quot;BGM-0366&quot;    
+ [26] &quot;BGM-0383&quot;     &quot;BGM-0413&quot;     &quot;BGM-0423&quot;     &quot;BGM-0428&quot;     &quot;BGM-0461&quot;    
+ [31] &quot;BGM-0472&quot;     &quot;BGM-0484&quot;     &quot;BGM-0494&quot;     &quot;BGM-0509&quot;     &quot;BGM-0514&quot;    
+ [36] &quot;BGM-0521&quot;     &quot;BGM-0540&quot;     &quot;BGM-0598&quot;     &quot;BGM-0606&quot;     &quot;BGM-0609&quot;    
+ [41] &quot;BGM-0610&quot;     &quot;BGM-0639&quot;     &quot;BGM-0661&quot;     &quot;BGM-0685&quot;     &quot;BGM-0697&quot;    
+ [46] &quot;BGM-0752&quot;     &quot;BGM-0779&quot;     &quot;BGM-0821&quot;     &quot;BGM-0829&quot;     &quot;BGM-0830&quot;    
+ [51] &quot;BGM-0834&quot;     &quot;BGM-0842&quot;     &quot;BGM-0859&quot;     &quot;BGM-0872&quot;     &quot;BGM-0878&quot;    
+ [56] &quot;BGM-0885&quot;     &quot;BGM-0893&quot;     &quot;BGM-0934&quot;     &quot;BGM-0944&quot;     &quot;BGM-0948&quot;    
+ [61] &quot;BGM-0953&quot;     &quot;BGM-0962&quot;     &quot;BGM-0975&quot;     &quot;BGM-0976&quot;     &quot;BGM-1037&quot;    
+ [66] &quot;BGM-1043&quot;     &quot;BGM-1082&quot;     &quot;BGM-1088&quot;     &quot;BGM-1110&quot;     &quot;BGM-1116&quot;    
+ [71] &quot;BGM-1118&quot;     &quot;BGM-1140&quot;     &quot;BGM-1142&quot;     &quot;BGM-1185&quot;     &quot;BGM-1195&quot;    
+ [76] &quot;BGM-1236&quot;     &quot;BGM-1248&quot;     &quot;BGM-1254&quot;     &quot;BGM-1257&quot;     &quot;BGM-1266&quot;    
+ [81] &quot;BGM-1272&quot;     &quot;BGM-1283&quot;     &quot;BGM-1288&quot;     &quot;BGM-1298&quot;     &quot;BGM-1308&quot;    
+ [86] &quot;BGM-1309&quot;     &quot;BGM-1329&quot;     &quot;BGM-1362&quot;     &quot;BGM-1363&quot;     &quot;BGM-1373&quot;    
+ [91] &quot;BGM-1379&quot;     &quot;BGM-1388&quot;     &quot;BGM-1389&quot;     &quot;BGM-1395&quot;     &quot;BGM-1398&quot;    
+ [96] &quot;BGM-1401&quot;     &quot;BGM-1402&quot;     &quot;BGM-1415&quot;     &quot;BGM-1420&quot;     &quot;BGM-1425&quot;    
+[101] &quot;BGM-1442&quot;     &quot;BGM-1458&quot;     &quot;BGM-1468&quot;     &quot;BGM-1472&quot;     &quot;BGM-1476&quot;    
+[106] &quot;BGM-1481&quot;     &quot;BGM-1516&quot;     &quot;BGM-1521&quot;     &quot;BGM-1543&quot;     &quot;BGM-1549&quot;    
+[111] &quot;BGM-1563&quot;     &quot;BGM-1585&quot;     &quot;BGM-1604&quot;     &quot;BGM-1618&quot;     &quot;BGM-1640&quot;    
+[116] &quot;BGM-1677&quot;     &quot;BGM-1697&quot;     &quot;BGM-1699&quot;     &quot;BGM-1711&quot;     &quot;BGM-1714&quot;    
+[121] &quot;BGM-1727&quot;     &quot;BGM-1728&quot;     &quot;BGM-1733&quot;     &quot;BGM-1739&quot;     &quot;BGM-1744&quot;    
+[126] &quot;BGM-1751&quot;     &quot;BGM-1757&quot;     &quot;BGM-1766&quot;     &quot;BGM-1828&quot;     &quot;BGM-2022&quot;    
+[131] &quot;BGM-2061&quot;     &quot;BGM-2062&quot;     &quot;BGM-2071&quot;     &quot;BGM-2072&quot;     &quot;BGM-2073&quot;    
+[136] &quot;BGM-2078&quot;     &quot;BGM-2085&quot;     &quot;BGM-2096&quot;     &quot;BGM-2101&quot;     &quot;BGM-2126&quot;    
+[141] &quot;BGM-2133&quot;     &quot;BGM-2135&quot;     &quot;BGM-2140&quot;     &quot;BGM-2148&quot;     &quot;BGM-2162&quot;    
+[146] &quot;BGM-2168&quot;     &quot;BGM-2182&quot;     &quot;BGM-2191&quot;     &quot;BGM-2192&quot;     &quot;BGM-2193&quot;    
+[151] &quot;BGM-2198&quot;     &quot;BGM-2200&quot;     &quot;BGM-2202&quot;     &quot;BGM-2205&quot;     &quot;BGM-2206&quot;    
+[156] &quot;BGM-2208&quot;     &quot;BGM-2209&quot;     &quot;BGM-2253&quot;     &quot;BGM-2294&quot;     &quot;BGM-2342&quot;    
+[161] &quot;BGM-2354&quot;     &quot;BR-11-24-156&quot; &quot;BR-11-34-41&quot;  &quot;BR-11-34-69&quot;  &quot;BRS-Formosa&quot; 
+[166] &quot;CPAFRO-35&quot;   </code></pre>
+<pre class="r"><code>sink()
+
+
 VennDGNC2 &lt;- list(
   `AM/MLST` = rownames(SelCC)[SelCC$`AM/MLST` == 1],
   `MR/MLST` = rownames(SelCC)[SelCC$`MR/MLST` == 1],
   `CE/MLST` = rownames(SelCC)[SelCC$`CE/MLST` == 1])
 VD3 &lt;- ggvenn(VennDGNC2, fill_color = c(&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;),
-              fill_alpha = 0.6, set_name_size = 5) </code></pre>
+              fill_alpha = 0.6, set_name_size = 5) 
+
+sink(file = here::here(&quot;output&quot;, &quot;ClonesSelCCGenDARwin.txt&quot;))
+VennDGNC2</code></pre>
+<pre><code>$`AM/MLST`
+  [1] &quot;BGM-0014&quot;          &quot;BGM-0016&quot;          &quot;BGM-0017&quot;         
+  [4] &quot;BGM-0020&quot;          &quot;BGM-0022-TB&quot;       &quot;BGM-0025&quot;         
+  [7] &quot;BGM-0040&quot;          &quot;BGM-0043&quot;          &quot;BGM-0048&quot;         
+ [10] &quot;BGM-0054&quot;          &quot;BGM-0056&quot;          &quot;BGM-0073&quot;         
+ [13] &quot;BGM-0083&quot;          &quot;BGM-0117&quot;          &quot;BGM-0134&quot;         
+ [16] &quot;BGM-0140&quot;          &quot;BGM-0153&quot;          &quot;BGM-0221&quot;         
+ [19] &quot;BGM-0236&quot;          &quot;BGM-0241&quot;          &quot;BGM-0255&quot;         
+ [22] &quot;BGM-0294&quot;          &quot;BGM-0295&quot;          &quot;BGM-0297&quot;         
+ [25] &quot;BGM-0342&quot;          &quot;BGM-0419&quot;          &quot;BGM-0424&quot;         
+ [28] &quot;BGM-0440&quot;          &quot;BGM-0444&quot;          &quot;BGM-0456&quot;         
+ [31] &quot;BGM-0460&quot;          &quot;BGM-0461&quot;          &quot;BGM-0465&quot;         
+ [34] &quot;BGM-0467&quot;          &quot;BGM-0471&quot;          &quot;BGM-0474&quot;         
+ [37] &quot;BGM-0492&quot;          &quot;BGM-0550&quot;          &quot;BGM-0561&quot;         
+ [40] &quot;BGM-0565&quot;          &quot;BGM-0570&quot;          &quot;BGM-0575&quot;         
+ [43] &quot;BGM-0585&quot;          &quot;BGM-0593&quot;          &quot;BGM-0607&quot;         
+ [46] &quot;BGM-0626&quot;          &quot;BGM-0639&quot;          &quot;BGM-0652&quot;         
+ [49] &quot;BGM-0657&quot;          &quot;BGM-0662&quot;          &quot;BGM-0671&quot;         
+ [52] &quot;BGM-0706&quot;          &quot;BGM-0707&quot;          &quot;BGM-0708&quot;         
+ [55] &quot;BGM-0713&quot;          &quot;BGM-0714&quot;          &quot;BGM-0726&quot;         
+ [58] &quot;BGM-0737&quot;          &quot;BGM-0779&quot;          &quot;BGM-0793&quot;         
+ [61] &quot;BGM-0808&quot;          &quot;BGM-0819&quot;          &quot;BGM-0822&quot;         
+ [64] &quot;BGM-0842&quot;          &quot;BGM-0859&quot;          &quot;BGM-0872&quot;         
+ [67] &quot;BGM-0889&quot;          &quot;BGM-0893&quot;          &quot;BGM-0894&quot;         
+ [70] &quot;BGM-0914&quot;          &quot;BGM-0925&quot;          &quot;BGM-0931&quot;         
+ [73] &quot;BGM-0944&quot;          &quot;BGM-0945&quot;          &quot;BGM-0953&quot;         
+ [76] &quot;BGM-0959&quot;          &quot;BGM-0960&quot;          &quot;BGM-0971&quot;         
+ [79] &quot;BGM-0974&quot;          &quot;BGM-0975&quot;          &quot;BGM-0984&quot;         
+ [82] &quot;BGM-0993&quot;          &quot;BGM-0998&quot;          &quot;BGM-1041&quot;         
+ [85] &quot;BGM-1053&quot;          &quot;BGM-1091&quot;          &quot;BGM-1127&quot;         
+ [88] &quot;BGM-1128&quot;          &quot;BGM-1138&quot;          &quot;BGM-1144&quot;         
+ [91] &quot;BGM-1146&quot;          &quot;BGM-1178&quot;          &quot;BGM-1183&quot;         
+ [94] &quot;BGM-1186&quot;          &quot;BGM-1195&quot;          &quot;BGM-1198&quot;         
+ [97] &quot;BGM-1210&quot;          &quot;BGM-1295&quot;          &quot;BGM-1338&quot;         
+[100] &quot;BGM-1354&quot;          &quot;BGM-1358&quot;          &quot;BGM-1363&quot;         
+[103] &quot;BGM-1389&quot;          &quot;BGM-1400&quot;          &quot;BGM-1441&quot;         
+[106] &quot;BGM-1448&quot;          &quot;BGM-1456&quot;          &quot;BGM-1482&quot;         
+[109] &quot;BGM-1511&quot;          &quot;BGM-1523&quot;          &quot;BGM-1525&quot;         
+[112] &quot;BGM-1549&quot;          &quot;BGM-1558&quot;          &quot;BGM-1581&quot;         
+[115] &quot;BGM-1632&quot;          &quot;BGM-1633&quot;          &quot;BGM-1657&quot;         
+[118] &quot;BGM-1674&quot;          &quot;BGM-1699&quot;          &quot;BGM-1708&quot;         
+[121] &quot;BGM-1713&quot;          &quot;BGM-1714&quot;          &quot;BGM-1724&quot;         
+[124] &quot;BGM-1744&quot;          &quot;BGM-1766&quot;          &quot;BGM-1769&quot;         
+[127] &quot;BGM-1772&quot;          &quot;BGM-1779&quot;          &quot;BGM-1828&quot;         
+[130] &quot;BGM-1830&quot;          &quot;BGM-1867&quot;          &quot;BGM-1942&quot;         
+[133] &quot;BGM-1957&quot;          &quot;BGM-1981&quot;          &quot;BGM-1999&quot;         
+[136] &quot;BGM-2026&quot;          &quot;BGM-2028&quot;          &quot;BGM-2058&quot;         
+[139] &quot;BGM-2063&quot;          &quot;BGM-2070&quot;          &quot;BGM-2085&quot;         
+[142] &quot;BGM-2108&quot;          &quot;BGM-2120&quot;          &quot;BGM-2127&quot;         
+[145] &quot;BGM-2180&quot;          &quot;BGM-2193&quot;          &quot;BGM-2205&quot;         
+[148] &quot;BGM-2209&quot;          &quot;BGM-2226&quot;          &quot;BGM-2233&quot;         
+[151] &quot;BGM-2264&quot;          &quot;BGM-2281&quot;          &quot;BGM-2293&quot;         
+[154] &quot;BGM-2294&quot;          &quot;BGM-2346&quot;          &quot;BGM-2352&quot;         
+[157] &quot;BR-12-107-02&quot;      &quot;BRS-Caipira&quot;       &quot;BRS-NovoHorizonte&quot;
+[160] &quot;BRS-Poti-Branca&quot;   &quot;CPAFRO-05&quot;         &quot;CPAFRO-18&quot;        
+[163] &quot;CPAFRO-33&quot;         &quot;CPAFRO-35&quot;         &quot;CPAFRO-42&quot;        
+[166] &quot;SE-09&quot;            
+
+$`MR/MLST`
+  [1] &quot;BGM-0014&quot;        &quot;BGM-0016&quot;        &quot;BGM-0019&quot;        &quot;BGM-0020&quot;       
+  [5] &quot;BGM-0029&quot;        &quot;BGM-0035&quot;        &quot;BGM-0043&quot;        &quot;BGM-0044&quot;       
+  [9] &quot;BGM-0049&quot;        &quot;BGM-0060&quot;        &quot;BGM-0070&quot;        &quot;BGM-0117&quot;       
+ [13] &quot;BGM-0134&quot;        &quot;BGM-0140&quot;        &quot;BGM-0165&quot;        &quot;BGM-0186&quot;       
+ [17] &quot;BGM-0190&quot;        &quot;BGM-0221&quot;        &quot;BGM-0236&quot;        &quot;BGM-0294&quot;       
+ [21] &quot;BGM-0295&quot;        &quot;BGM-0356&quot;        &quot;BGM-0378&quot;        &quot;BGM-0383&quot;       
+ [25] &quot;BGM-0420&quot;        &quot;BGM-0424&quot;        &quot;BGM-0440&quot;        &quot;BGM-0456&quot;       
+ [29] &quot;BGM-0460&quot;        &quot;BGM-0461&quot;        &quot;BGM-0470&quot;        &quot;BGM-0474&quot;       
+ [33] &quot;BGM-0492&quot;        &quot;BGM-0509&quot;        &quot;BGM-0514&quot;        &quot;BGM-0561&quot;       
+ [37] &quot;BGM-0565&quot;        &quot;BGM-0570&quot;        &quot;BGM-0575&quot;        &quot;BGM-0593&quot;       
+ [41] &quot;BGM-0624&quot;        &quot;BGM-0626&quot;        &quot;BGM-0639&quot;        &quot;BGM-0652&quot;       
+ [45] &quot;BGM-0657&quot;        &quot;BGM-0664&quot;        &quot;BGM-0668&quot;        &quot;BGM-0671&quot;       
+ [49] &quot;BGM-0706&quot;        &quot;BGM-0714&quot;        &quot;BGM-0726&quot;        &quot;BGM-0737&quot;       
+ [53] &quot;BGM-0752&quot;        &quot;BGM-0779&quot;        &quot;BGM-0793&quot;        &quot;BGM-0808&quot;       
+ [57] &quot;BGM-0818&quot;        &quot;BGM-0819&quot;        &quot;BGM-0858&quot;        &quot;BGM-0872&quot;       
+ [61] &quot;BGM-0894&quot;        &quot;BGM-0903&quot;        &quot;BGM-0909&quot;        &quot;BGM-0914&quot;       
+ [65] &quot;BGM-0925&quot;        &quot;BGM-0943&quot;        &quot;BGM-0944&quot;        &quot;BGM-0945&quot;       
+ [69] &quot;BGM-0961&quot;        &quot;BGM-0962&quot;        &quot;BGM-0975&quot;        &quot;BGM-0984&quot;       
+ [73] &quot;BGM-0993&quot;        &quot;BGM-0998&quot;        &quot;BGM-1037&quot;        &quot;BGM-1044&quot;       
+ [77] &quot;BGM-1053&quot;        &quot;BGM-1088&quot;        &quot;BGM-1128&quot;        &quot;BGM-1146&quot;       
+ [81] &quot;BGM-1178&quot;        &quot;BGM-1184&quot;        &quot;BGM-1186&quot;        &quot;BGM-1195&quot;       
+ [85] &quot;BGM-1198&quot;        &quot;BGM-1210&quot;        &quot;BGM-1265&quot;        &quot;BGM-1300&quot;       
+ [89] &quot;BGM-1338&quot;        &quot;BGM-1363&quot;        &quot;BGM-1368&quot;        &quot;BGM-1386&quot;       
+ [93] &quot;BGM-1398&quot;        &quot;BGM-1400&quot;        &quot;BGM-1415&quot;        &quot;BGM-1420&quot;       
+ [97] &quot;BGM-1448&quot;        &quot;BGM-1456&quot;        &quot;BGM-1458&quot;        &quot;BGM-1482&quot;       
+[101] &quot;BGM-1511&quot;        &quot;BGM-1525&quot;        &quot;BGM-1543&quot;        &quot;BGM-1549&quot;       
+[105] &quot;BGM-1563&quot;        &quot;BGM-1581&quot;        &quot;BGM-1585&quot;        &quot;BGM-1618&quot;       
+[109] &quot;BGM-1622&quot;        &quot;BGM-1629&quot;        &quot;BGM-1632&quot;        &quot;BGM-1633&quot;       
+[113] &quot;BGM-1670&quot;        &quot;BGM-1696&quot;        &quot;BGM-1698&quot;        &quot;BGM-1699&quot;       
+[117] &quot;BGM-1711&quot;        &quot;BGM-1713&quot;        &quot;BGM-1714&quot;        &quot;BGM-1744&quot;       
+[121] &quot;BGM-1745&quot;        &quot;BGM-1751&quot;        &quot;BGM-1754&quot;        &quot;BGM-1766&quot;       
+[125] &quot;BGM-1769&quot;        &quot;BGM-1772&quot;        &quot;BGM-1779&quot;        &quot;BGM-1828&quot;       
+[129] &quot;BGM-1942&quot;        &quot;BGM-1957&quot;        &quot;BGM-2022&quot;        &quot;BGM-2058&quot;       
+[133] &quot;BGM-2061&quot;        &quot;BGM-2063&quot;        &quot;BGM-2070&quot;        &quot;BGM-2071&quot;       
+[137] &quot;BGM-2085&quot;        &quot;BGM-2091&quot;        &quot;BGM-2096&quot;        &quot;BGM-2108&quot;       
+[141] &quot;BGM-2119&quot;        &quot;BGM-2120&quot;        &quot;BGM-2140&quot;        &quot;BGM-2183&quot;       
+[145] &quot;BGM-2193&quot;        &quot;BGM-2200&quot;        &quot;BGM-2201&quot;        &quot;BGM-2206&quot;       
+[149] &quot;BGM-2209&quot;        &quot;BGM-2226&quot;        &quot;BGM-2233&quot;        &quot;BGM-2242&quot;       
+[153] &quot;BGM-2281&quot;        &quot;BGM-2290&quot;        &quot;BGM-2294&quot;        &quot;BGM-2345&quot;       
+[157] &quot;BGM-2352&quot;        &quot;BR-11-34-64&quot;     &quot;BR-12-107-02&quot;    &quot;BRS-Caipira&quot;    
+[161] &quot;BRS-Poti-Branca&quot; &quot;CPAFRO-05&quot;       &quot;CPAFRO-18&quot;       &quot;CPAFRO-33&quot;      
+[165] &quot;CPAFRO-42&quot;       &quot;Secundina&quot;      
+
+$`CE/MLST`
+  [1] &quot;BGM-0014&quot;        &quot;BGM-0016&quot;        &quot;BGM-0025&quot;        &quot;BGM-0040&quot;       
+  [5] &quot;BGM-0050&quot;        &quot;BGM-0054&quot;        &quot;BGM-0097&quot;        &quot;BGM-0120&quot;       
+  [9] &quot;BGM-0134&quot;        &quot;BGM-0140&quot;        &quot;BGM-0221&quot;        &quot;BGM-0236&quot;       
+ [13] &quot;BGM-0239&quot;        &quot;BGM-0241&quot;        &quot;BGM-0281&quot;        &quot;BGM-0289&quot;       
+ [17] &quot;BGM-0294&quot;        &quot;BGM-0295&quot;        &quot;BGM-0297&quot;        &quot;BGM-0342&quot;       
+ [21] &quot;BGM-0378&quot;        &quot;BGM-0419&quot;        &quot;BGM-0424&quot;        &quot;BGM-0440&quot;       
+ [25] &quot;BGM-0444&quot;        &quot;BGM-0456&quot;        &quot;BGM-0460&quot;        &quot;BGM-0462&quot;       
+ [29] &quot;BGM-0464&quot;        &quot;BGM-0465&quot;        &quot;BGM-0467&quot;        &quot;BGM-0474&quot;       
+ [33] &quot;BGM-0478&quot;        &quot;BGM-0508&quot;        &quot;BGM-0550&quot;        &quot;BGM-0551&quot;       
+ [37] &quot;BGM-0565&quot;        &quot;BGM-0575&quot;        &quot;BGM-0585&quot;        &quot;BGM-0591&quot;       
+ [41] &quot;BGM-0593&quot;        &quot;BGM-0606&quot;        &quot;BGM-0624&quot;        &quot;BGM-0626&quot;       
+ [45] &quot;BGM-0631&quot;        &quot;BGM-0636&quot;        &quot;BGM-0652&quot;        &quot;BGM-0657&quot;       
+ [49] &quot;BGM-0660&quot;        &quot;BGM-0662&quot;        &quot;BGM-0668&quot;        &quot;BGM-0680&quot;       
+ [53] &quot;BGM-0694&quot;        &quot;BGM-0706&quot;        &quot;BGM-0713&quot;        &quot;BGM-0714&quot;       
+ [57] &quot;BGM-0718&quot;        &quot;BGM-0726&quot;        &quot;BGM-0733&quot;        &quot;BGM-0737&quot;       
+ [61] &quot;BGM-0779&quot;        &quot;BGM-0793&quot;        &quot;BGM-0808&quot;        &quot;BGM-0819&quot;       
+ [65] &quot;BGM-0821&quot;        &quot;BGM-0822&quot;        &quot;BGM-0842&quot;        &quot;BGM-0872&quot;       
+ [69] &quot;BGM-0884&quot;        &quot;BGM-0885&quot;        &quot;BGM-0889&quot;        &quot;BGM-0893&quot;       
+ [73] &quot;BGM-0894&quot;        &quot;BGM-0895&quot;        &quot;BGM-0902&quot;        &quot;BGM-0907&quot;       
+ [77] &quot;BGM-0914&quot;        &quot;BGM-0931&quot;        &quot;BGM-0945&quot;        &quot;BGM-0953&quot;       
+ [81] &quot;BGM-0954&quot;        &quot;BGM-0959&quot;        &quot;BGM-0960&quot;        &quot;BGM-0962&quot;       
+ [85] &quot;BGM-0971&quot;        &quot;BGM-0973&quot;        &quot;BGM-0974&quot;        &quot;BGM-0975&quot;       
+ [89] &quot;BGM-0980&quot;        &quot;BGM-0982&quot;        &quot;BGM-0984&quot;        &quot;BGM-0987&quot;       
+ [93] &quot;BGM-0989&quot;        &quot;BGM-0991&quot;        &quot;BGM-0993&quot;        &quot;BGM-0998&quot;       
+ [97] &quot;BGM-1015&quot;        &quot;BGM-1024&quot;        &quot;BGM-1041&quot;        &quot;BGM-1053&quot;       
+[101] &quot;BGM-1091&quot;        &quot;BGM-1127&quot;        &quot;BGM-1132&quot;        &quot;BGM-1137&quot;       
+[105] &quot;BGM-1139&quot;        &quot;BGM-1144&quot;        &quot;BGM-1146&quot;        &quot;BGM-1152&quot;       
+[109] &quot;BGM-1177&quot;        &quot;BGM-1178&quot;        &quot;BGM-1183&quot;        &quot;BGM-1184&quot;       
+[113] &quot;BGM-1186&quot;        &quot;BGM-1196&quot;        &quot;BGM-1198&quot;        &quot;BGM-1255&quot;       
+[117] &quot;BGM-1257&quot;        &quot;BGM-1259&quot;        &quot;BGM-1286&quot;        &quot;BGM-1295&quot;       
+[121] &quot;BGM-1335&quot;        &quot;BGM-1354&quot;        &quot;BGM-1358&quot;        &quot;BGM-1361&quot;       
+[125] &quot;BGM-1389&quot;        &quot;BGM-1400&quot;        &quot;BGM-1441&quot;        &quot;BGM-1448&quot;       
+[129] &quot;BGM-1511&quot;        &quot;BGM-1525&quot;        &quot;BGM-1558&quot;        &quot;BGM-1581&quot;       
+[133] &quot;BGM-1588&quot;        &quot;BGM-1621&quot;        &quot;BGM-1657&quot;        &quot;BGM-1660&quot;       
+[137] &quot;BGM-1674&quot;        &quot;BGM-1675&quot;        &quot;BGM-1698&quot;        &quot;BGM-1703&quot;       
+[141] &quot;BGM-1712&quot;        &quot;BGM-1713&quot;        &quot;BGM-1722(D)&quot;     &quot;BGM-1724&quot;       
+[145] &quot;BGM-1729&quot;        &quot;BGM-1744&quot;        &quot;BGM-1772&quot;        &quot;BGM-1779&quot;       
+[149] &quot;BGM-1817&quot;        &quot;BGM-1824&quot;        &quot;BGM-1828&quot;        &quot;BGM-1830&quot;       
+[153] &quot;BGM-1865&quot;        &quot;BGM-1873&quot;        &quot;BGM-1884&quot;        &quot;BGM-1942&quot;       
+[157] &quot;BGM-1981&quot;        &quot;BGM-1999&quot;        &quot;BGM-2026&quot;        &quot;BGM-2028&quot;       
+[161] &quot;BGM-2038&quot;        &quot;BGM-2047&quot;        &quot;BGM-2063&quot;        &quot;BGM-2070&quot;       
+[165] &quot;BGM-2085&quot;        &quot;BGM-2091&quot;        &quot;BGM-2120&quot;        &quot;BGM-2123&quot;       
+[169] &quot;BGM-2127&quot;        &quot;BGM-2175&quot;        &quot;BGM-2180&quot;        &quot;BGM-2209&quot;       
+[173] &quot;BGM-2216&quot;        &quot;BGM-2226&quot;        &quot;BGM-2233&quot;        &quot;BGM-2266&quot;       
+[177] &quot;BGM-2293&quot;        &quot;BGM-2294&quot;        &quot;BGM-2345&quot;        &quot;BGM-2346&quot;       
+[181] &quot;BGM-2352&quot;        &quot;BR-12-107-02&quot;    &quot;BRS-396&quot;         &quot;BRS-Poti-Branca&quot;
+[185] &quot;CPAFRO-05&quot;       &quot;CPAFRO-09&quot;       &quot;CPAFRO-18&quot;       &quot;CPAFRO-33&quot;      
+[189] &quot;CPAFRO-42&quot;       &quot;SE-09&quot;           &quot;Secundina&quot;      </code></pre>
+<pre class="r"><code>sink()</code></pre>
 <div id="fig-2.-venn-diagram-for-the-three-groups-of-nuclear-collections" class="section level4">
 <h4>Fig 2. Venn diagram for the three groups of Nuclear Collections</h4>
 <p><img src="figure/DivGen.Rmd/Fig%202-1.png" width="672" style="display: block; margin: auto;" /></p>
@@ -1257,6 +1810,28 @@ Date
 <tbody>
 <tr>
 <td>
+<a href="https://github.com/LucianoRogerio/CarolineNCC1/blob/3cd790c08ac627e590339241d8e2cde8c31024a8/docs/figure/DivGen.Rmd/Fig 2-1.png" target="_blank">3cd790c</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-08-22
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/LucianoRogerio/CarolineNCC1/blob/5908b141018f75efa3da30153ed620fe14f09dbf/docs/figure/DivGen.Rmd/Fig 2-1.png" target="_blank">5908b14</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-08-22
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://github.com/LucianoRogerio/CarolineNCC1/blob/636bc47297f70e5bd2dd7b64cac41a59734f1a98/docs/figure/DivGen.Rmd/Fig 2-1.png" target="_blank">636bc47</a>
 </td>
 <td>
@@ -1280,6 +1855,9 @@ SHIndPhen &lt;- SHInd[ , colnames(SHInd)%like%&quot;Pheno&quot;]
 
 SHRelPhen &lt;- (SHIndPhen - SHBAG)*100/SHBAG
 
+write.table(SHRelPhen, file = here::here(&quot;output&quot;, &quot;GanhoRelativoShannonWeaverPhen.csv&quot;),
+            quote = F, sep = &quot;,&quot;)
+
 SHSelPhen &lt;- data.frame(Method = colnames(SHRelPhen),
                         SHMeanImprov = colMeans(SHRelPhen, na.rm = TRUE),
                         SHsd = apply(SHRelPhen, FUN = sd, na.rm = TRUE, MARGIN = 2),
@@ -1301,6 +1879,8 @@ Alldataset %&gt;% filter(Acessos %in% CloneSelNCPheno, Method == &quot;BAG&quot;
 
 SHRelGen &lt;- (SHIndGen - SHBAG)*100/SHBAG
 
+write.table(SHRelGen, file = here::here(&quot;output&quot;, &quot;GanhoRelativoShannonWeaverGen.csv&quot;),
+            quote = F, sep = &quot;,&quot;)
 SHSelGen &lt;- data.frame(Method = colnames(SHRelGen),
                         SHMeanImprov = colMeans(SHRelGen, na.rm = TRUE),
                         SHsd = apply(SHRelGen, FUN = sd, na.rm = TRUE, MARGIN = 2),
@@ -1391,6 +1971,28 @@ Date
 <tbody>
 <tr>
 <td>
+<a href="https://github.com/LucianoRogerio/CarolineNCC1/blob/3cd790c08ac627e590339241d8e2cde8c31024a8/docs/figure/DivGen.Rmd/Fig 3-1.png" target="_blank">3cd790c</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-08-22
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/LucianoRogerio/CarolineNCC1/blob/5908b141018f75efa3da30153ed620fe14f09dbf/docs/figure/DivGen.Rmd/Fig 3-1.png" target="_blank">5908b14</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-08-22
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://github.com/LucianoRogerio/CarolineNCC1/blob/f5ced67f62b690c4f7baa9d347632e7057777ead/docs/figure/DivGen.Rmd/Fig 3-1.png" target="_blank">f5ced67</a>
 </td>
 <td>
@@ -1473,6 +2075,28 @@ Date
 <tbody>
 <tr>
 <td>
+<a href="https://github.com/LucianoRogerio/CarolineNCC1/blob/3cd790c08ac627e590339241d8e2cde8c31024a8/docs/figure/DivGen.Rmd/Fig 4-1.png" target="_blank">3cd790c</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-08-22
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/LucianoRogerio/CarolineNCC1/blob/5908b141018f75efa3da30153ed620fe14f09dbf/docs/figure/DivGen.Rmd/Fig 4-1.png" target="_blank">5908b14</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-08-22
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://github.com/LucianoRogerio/CarolineNCC1/blob/f5ced67f62b690c4f7baa9d347632e7057777ead/docs/figure/DivGen.Rmd/Fig 4-1.png" target="_blank">f5ced67</a>
 </td>
 <td>
@@ -1523,6 +2147,28 @@ Date
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+<a href="https://github.com/LucianoRogerio/CarolineNCC1/blob/3cd790c08ac627e590339241d8e2cde8c31024a8/docs/figure/DivGen.Rmd/Fig 5-1.png" target="_blank">3cd790c</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-08-22
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/LucianoRogerio/CarolineNCC1/blob/5908b141018f75efa3da30153ed620fe14f09dbf/docs/figure/DivGen.Rmd/Fig 5-1.png" target="_blank">5908b14</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-08-22
+</td>
+</tr>
 <tr>
 <td>
 <a href="https://github.com/LucianoRogerio/CarolineNCC1/blob/f5ced67f62b690c4f7baa9d347632e7057777ead/docs/figure/DivGen.Rmd/Fig 5-1.png" target="_blank">f5ced67</a>
@@ -1676,6 +2322,28 @@ Date
 <tbody>
 <tr>
 <td>
+<a href="https://github.com/LucianoRogerio/CarolineNCC1/blob/3cd790c08ac627e590339241d8e2cde8c31024a8/docs/figure/DivGen.Rmd/Fig 7-1.png" target="_blank">3cd790c</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-08-22
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/LucianoRogerio/CarolineNCC1/blob/5908b141018f75efa3da30153ed620fe14f09dbf/docs/figure/DivGen.Rmd/Fig 7-1.png" target="_blank">5908b14</a>
+</td>
+<td>
+LucianoRogerio
+</td>
+<td>
+2022-08-22
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://github.com/LucianoRogerio/CarolineNCC1/blob/636bc47297f70e5bd2dd7b64cac41a59734f1a98/docs/figure/DivGen.Rmd/Fig 7-1.png" target="_blank">636bc47</a>
 </td>
 <td>
@@ -1729,8 +2397,8 @@ colnames(Table3SH) &lt;- unique(QuantSHs$Method)
 
 write.table(Table3SH, file = here::here(&quot;output&quot;, &quot;Shannon-WeaverCCFinalQuantIndex.csv&quot;),
             sep = &quot;,&quot;, dec = &quot;.&quot;, quote = FALSE)</code></pre>
-<div id="table-8.-shannon-weaver-indexes-for-cassava-quantitative-traits-of-the-bank-of-germplasm-and-12-nuclear-core-collections." class="section level4">
-<h4><strong>Table 8.</strong> Shannon-Weaver indexes for Cassava quantitative traits of the Bank of germplasm and 12 nuclear core collections.</h4>
+<div id="table-8.-shannon-weaver-indexes-for-cassava-quantitative-traits-of-the-bank-of-germplasm-and-3-nuclear-core-collections." class="section level4">
+<h4><strong>Table 8.</strong> Shannon-Weaver indexes for Cassava quantitative traits of the Bank of germplasm and 3 nuclear core collections.</h4>
 <div id="htmlwidget-1a4c00e6d41c3f190d96" class="reactable html-widget" style="width:auto;height:auto;"></div>
 <script type="application/json" data-for="htmlwidget-1a4c00e6d41c3f190d96">{"x":{"tag":{"name":"Reactable","attribs":{"data":{".rownames":["ComprFilotaxia","ComprLobulo","LargLobulo","RelComprLar","ComprPeciolo","EspEntreCasca","ComprMedRzs","DiamMedRzs","HCNPic","NR","PA","DRY","DMCsg","PTR","PPA","IC"],"BAG":[0.663551798194327,0.790460364849811,0.817237217384814,0.504260259918077,0.701191729705613,0.0179812425732917,0.470860033661483,0.600405947942263,0.871836793698058,0.684085245712228,0.812851801160739,0.717222271486174,0.70825858452519,0.764982922793076,0.782051788589567,0.758589649365472],"Pheno":[0.7920048292972,0.857068755610268,0.88760296596017,0.545193162059003,0.812906542411497,0.0449275658116986,0.585921562142752,0.703345650986807,0.879275871090092,0.748920302430949,0.830186243517435,0.767635903483158,0.770702904472145,0.815057026568533,0.819210394147569,0.827321985187829],"CoreHunter":[0.684977356455768,0.793636560958638,0.813756129837667,0.400611730668265,0.709001682182235,0.0216326684364444,0.39461006090843,0.610377242656309,0.908550225379381,0.706356900725616,0.839112840684075,0.702649098029085,0.70370136757793,0.755277266922248,0.726829867610898,0.817095788509484],"DARWin":[0.675133532133042,0.771439813824086,0.796858253325808,0.556976096510243,0.688426274957541,0.0218666975125945,0.530765096826652,0.561690297491353,0.868724367190852,0.680758926164382,0.781578441813058,0.62970639321629,0.698964284978289,0.704930557039071,0.78864977098937,0.763836989125333],"NCSel":[0.722910181771188,0.820509087702847,0.845256185708271,0.522579106352039,0.752575065194302,0.0371366445015923,0.492559674021351,0.639591909006303,0.882152408867282,0.71254869839181,0.820552928577902,0.717009391537693,0.735141184439868,0.765918370244085,0.792340116496717,0.802198058052857]},"columns":[{"accessor":".rownames","name":"","type":"character","sortable":false,"filterable":false,"rowHeader":true},{"accessor":"BAG","name":"BAG","type":"numeric","format":{"cell":{"digits":3,"locales":"en-US"},"aggregated":{"digits":3,"locales":"en-US"}}},{"accessor":"Pheno","name":"Pheno","type":"numeric","format":{"cell":{"digits":3,"locales":"en-US"},"aggregated":{"digits":3,"locales":"en-US"}}},{"accessor":"CoreHunter","name":"CoreHunter","type":"numeric","format":{"cell":{"digits":3,"locales":"en-US"},"aggregated":{"digits":3,"locales":"en-US"}}},{"accessor":"DARWin","name":"DARWin","type":"numeric","format":{"cell":{"digits":3,"locales":"en-US"},"aggregated":{"digits":3,"locales":"en-US"}}},{"accessor":"NCSel","name":"NCSel","type":"numeric","format":{"cell":{"digits":3,"locales":"en-US"},"aggregated":{"digits":3,"locales":"en-US"}}}],"defaultPageSize":16,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"0a9b7310c550241e16801f18a99a2bd2"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
@@ -1774,8 +2442,8 @@ write.table(Table4SH, file = here::here(&quot;output&quot;, &quot;Shannon-Weaver
             sep = &quot;,&quot;, dec = &quot;.&quot;, quote = FALSE)
 
 SHInd &lt;- as.data.frame(rbind(Table3SH, Table4SH))</code></pre>
-<div id="table-9.-shannon-weaver-indexes-for-cassava-quality-traits-of-the-bank-of-germplasm-and-12-nuclear-core-collections." class="section level4">
-<h4><strong>Table 9.</strong> Shannon-Weaver indexes for Cassava quality traits of the Bank of germplasm and 12 nuclear core collections.</h4>
+<div id="table-9.-shannon-weaver-indexes-for-cassava-quality-traits-of-the-bank-of-germplasm-and-3-nuclear-core-collections." class="section level4">
+<h4><strong>Table 9.</strong> Shannon-Weaver indexes for Cassava quality traits of the Bank of germplasm and 3 nuclear core collections.</h4>
 <div id="htmlwidget-06da4205420b28772dfa" class="reactable html-widget" style="width:auto;height:auto;"></div>
 <script type="application/json" data-for="htmlwidget-06da4205420b28772dfa">{"x":{"tag":{"name":"Reactable","attribs":{"data":{".rownames":["CorFolhaApical","CorPeciolo","CorFolhaDesenv","CorNerv","CorCortexCaule","CorExternaCaule","CorEpidCaule","CorRamosTerm","CorExternaRzs","CorCortexRzs","CorPolpaRzs","NLobulos","Pubescencia","FormaLobuloCentral","PosicaoPeciolo","Sinuosidade","ComprEstip","HabCrescCaule","TipoPlan","MargEstip","HabRamif","NiveisRam","ProemCicatrizesFolhas","FormaRzs","TxtEpidermeRzs","PresPedunculoRzs","PosicaoRzs","Flowering","DestqPelicRz","DestqCortexRz","ConstrRzs","AnguloRamif"],"BAG":[0.874281927739704,0.890618414521795,0.325754778727977,0.585100542193669,0.588058805874759,0.911336898771211,0.982265204647425,0.789100594020941,0.716154423472098,0.844975104578852,0.432496850570132,0.461329534721711,0.824642004423236,0.4229448597552,0.550075594160548,0.973371049309228,0.580894475119314,0.127295371016215,0.729583290133879,0.302227379571451,0.736387987180587,0.975766481835956,0.866407557895842,0.696693624545067,0.710917716488231,0.894298083044931,0.576569501744122,0.865618190004114,0.992642659055279,0.544520265907689,0.952428756673666,0.614446546299343],"Pheno":[0.927280374979846,0.928861262659468,0.425045478246004,0.729374146009644,0.74192456278894,0.96516879403488,0.990298776947693,0.918124607613559,0.895897211433758,0.95315694682344,0.623610995186042,0.585746856002274,0.906701676216881,0.59899571900164,0.838861134194839,0.949999820451731,0.724604549308465,0.380040179251439,0.835079743277024,0.65261316990954,0.794877416784935,0.980856032594328,0.988238511332864,0.842858793317603,0.829368151177999,0.962820789428743,0.7898181670189,0.997366572192774,0.972499318498937,0.755602387807931,0.972395850560511,0.62820659164463],"CoreHunter":[0.866353411306907,0.842366707013302,0.196682934559865,0.495562267749957,0.579224969222879,0.923643778258436,0.986907946261943,0.75380836464244,0.765115369963557,0.781772605458408,0.419396534231272,0.519504800566689,0.882852427647287,0.471037837692184,0.582525851798858,0.999881432070591,0.264199693200291,0.172036949353114,0.675718043496692,0.204576859166583,0.736079493119895,0.946732723517508,0.830972808298501,0.730657330418607,0.866725613094959,0.896733550865917,0.530207289589978,0.911751758634754,0.990374836448575,0.519653381330535,0.996800641363126,0.562044035054834],"DARWin":[0.874677944899672,0.921675968046542,0.302228158251279,0.48180304762312,0.62926263274035,0.938602280836096,0.989419462686783,0.755479970327643,0.806141460018794,0.805865857022125,0.506806208463634,0.426510647764554,0.928740152059961,0.419906749292873,0.650257373732755,0.94566030460064,0.417549806772407,0.206619332751402,0.682347974124118,0.100000943010324,0.719060325448185,0.95717977273794,0.806091469619222,0.672895649455984,0.871556146308406,0.86449896162799,0.618735896654146,0.968625845731375,0.999878332299006,0.554110753334197,0.971747853001141,0.571078907801374],"NCSel":[0.901478664735622,0.90262595305948,0.321460125427067,0.583367173644371,0.651631077937228,0.941598171838052,0.98932938679571,0.838454565939168,0.818813555426011,0.856567611556896,0.505876410308991,0.523513877896727,0.902518500031475,0.511725702329895,0.689322250824201,0.974360599239397,0.508250565134084,0.254117917147379,0.76641449055244,0.357164634742142,0.751896446651362,0.972757196455757,0.888223544798042,0.745774848126327,0.856405238913138,0.913880760058597,0.663812998776812,0.960448173702474,0.99869013038732,0.618668297814552,0.975757048819572,0.594683171967844]},"columns":[{"accessor":".rownames","name":"","type":"character","sortable":false,"filterable":false,"rowHeader":true},{"accessor":"BAG","name":"BAG","type":"numeric","format":{"cell":{"digits":3,"locales":"en-US"},"aggregated":{"digits":3,"locales":"en-US"}}},{"accessor":"Pheno","name":"Pheno","type":"numeric","format":{"cell":{"digits":3,"locales":"en-US"},"aggregated":{"digits":3,"locales":"en-US"}}},{"accessor":"CoreHunter","name":"CoreHunter","type":"numeric","format":{"cell":{"digits":3,"locales":"en-US"},"aggregated":{"digits":3,"locales":"en-US"}}},{"accessor":"DARWin","name":"DARWin","type":"numeric","format":{"cell":{"digits":3,"locales":"en-US"},"aggregated":{"digits":3,"locales":"en-US"}}},{"accessor":"NCSel","name":"NCSel","type":"numeric","format":{"cell":{"digits":3,"locales":"en-US"},"aggregated":{"digits":3,"locales":"en-US"}}}],"defaultPageSize":15,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"03000018627867f83612f88c8463e059"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
@@ -1788,6 +2456,9 @@ SHIndFinal &lt;- SHInd[ , !colnames(SHInd)%like%&quot;BAG&quot;]
 
 SHRelFinal &lt;- (SHIndFinal - SHBAG)*100/SHBAG
 
+write.table(SHRelFinal, file = here::here(&quot;output&quot;, &quot;GanhoRelativoShannonWeaverFinal.csv&quot;),
+            quote = F, sep = &quot;,&quot;)
+
 SHSelFinal &lt;- data.frame(Method = colnames(SHRelFinal),
                         SHMeanImprov = colMeans(SHRelFinal, na.rm = TRUE),
                         SHsd = apply(SHRelFinal, FUN = sd, na.rm = TRUE, MARGIN = 2),
@@ -1796,6 +2467,162 @@ SHSelFinal &lt;- data.frame(Method = colnames(SHRelFinal),
 <h4><strong>Table 10.</strong> Mean improvement of the Shannon-Weaver diversity index in % of nuclear core collections estimated of Phenotypic data compared to the Bank of Germplasm</h4>
 <div id="htmlwidget-f8a6f2c4148170974ae8" class="reactable html-widget" style="width:auto;height:auto;"></div>
 <script type="application/json" data-for="htmlwidget-f8a6f2c4148170974ae8">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Method":["Pheno","CoreHunter","DARWin","NCSel"],"SHMeanImprov":[23.7668615599589,-1.72816521384164,0.435763545455745,9.83139318843726],"SHsd":[37.4532253284152,14.2305190710183,16.332968439517,20.8931683730209]},"columns":[{"accessor":"Method","name":"Method","type":"character"},{"accessor":"SHMeanImprov","name":"SHMeanImprov","type":"numeric","format":{"cell":{"digits":3,"locales":"en-US"},"aggregated":{"digits":3,"locales":"en-US"}}},{"accessor":"SHsd","name":"SHsd","type":"numeric","format":{"cell":{"digits":3,"locales":"en-US"},"aggregated":{"digits":3,"locales":"en-US"}}}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"cfdeb562771bb342744ec5afb94d1402"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="final-venn-diagram-for-each-nuclear-collection-group" class="section level3">
+<h3>Final Venn diagram for each Nuclear Collection Group</h3>
+<pre class="r"><code>SelCC &lt;- tibble(Clones = BAGClones)
+CCFMet &lt;- unique(Alldataset$Method)
+
+for(i in CCFMet){
+  Common &lt;- BAGClones %in% Alldataset$Acessos[Alldataset$Method == i] %&gt;%
+    as.numeric %&gt;% as.data.frame
+  colnames(Common) &lt;- i
+  SelCC &lt;- cbind(SelCC, Common)
+}
+row.names(SelCC) &lt;- SelCC$Clones
+SelCC$Clones &lt;- NULL
+
+
+library(ggvenn)
+VennFinal &lt;- list(
+  Pheno = rownames(SelCC)[SelCC$Pheno == 1],
+  CoreHunter = rownames(SelCC)[SelCC$CoreHunter == 1],
+  DARWin = rownames(SelCC)[SelCC$DARWin == 1])
+VDFinal &lt;- ggvenn(VennFinal, fill_color = c(&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;),
+              fill_alpha = 0.6, set_name_size = 5)
+
+sink(file = here::here(&quot;output&quot;, &quot;ClonesSelCCFinal.txt&quot;))
+VennFinal</code></pre>
+<pre><code>$Pheno
+  [1] &quot;2019g-08-44&quot;            &quot;7909-04&quot;                &quot;AF-BR-11-52-25&quot;        
+  [4] &quot;AF-BR-11-53-01&quot;         &quot;Aipim Brasilia&quot;         &quot;BGM-0010&quot;              
+  [7] &quot;BGM-0031&quot;               &quot;BGM-0042&quot;               &quot;BGM-0049&quot;              
+ [10] &quot;BGM-0050&quot;               &quot;BGM-0053&quot;               &quot;BGM-0054&quot;              
+ [13] &quot;BGM-0058&quot;               &quot;BGM-0075&quot;               &quot;BGM-0094&quot;              
+ [16] &quot;BGM-0097&quot;               &quot;BGM-0113-RcxRos&quot;        &quot;BGM-0131&quot;              
+ [19] &quot;BGM-0177&quot;               &quot;BGM-0181&quot;               &quot;BGM-0183&quot;              
+ [22] &quot;BGM-0207&quot;               &quot;BGM-0211&quot;               &quot;BGM-0213&quot;              
+ [25] &quot;BGM-0232&quot;               &quot;BGM-0254&quot;               &quot;BGM-0267&quot;              
+ [28] &quot;BGM-0343&quot;               &quot;BGM-0360&quot;               &quot;BGM-0364&quot;              
+ [31] &quot;BGM-0390&quot;               &quot;BGM-0424&quot;               &quot;BGM-0436&quot;              
+ [34] &quot;BGM-0473&quot;               &quot;BGM-0500&quot;               &quot;BGM-0541&quot;              
+ [37] &quot;BGM-0587&quot;               &quot;BGM-0623&quot;               &quot;BGM-0678&quot;              
+ [40] &quot;BGM-0702&quot;               &quot;BGM-0752&quot;               &quot;BGM-0760&quot;              
+ [43] &quot;BGM-0779&quot;               &quot;BGM-0780-B&quot;             &quot;BGM-0793&quot;              
+ [46] &quot;BGM-0821&quot;               &quot;BGM-0823&quot;               &quot;BGM-0834&quot;              
+ [49] &quot;BGM-0870&quot;               &quot;BGM-0878&quot;               &quot;BGM-0879&quot;              
+ [52] &quot;BGM-0882&quot;               &quot;BGM-0885&quot;               &quot;BGM-0893&quot;              
+ [55] &quot;BGM-0895&quot;               &quot;BGM-0901&quot;               &quot;BGM-0929&quot;              
+ [58] &quot;BGM-0936&quot;               &quot;BGM-0960&quot;               &quot;BGM-0961&quot;              
+ [61] &quot;BGM-0967&quot;               &quot;BGM-0977&quot;               &quot;BGM-0986&quot;              
+ [64] &quot;BGM-1029&quot;               &quot;BGM-1040&quot;               &quot;BGM-1115&quot;              
+ [67] &quot;BGM-1130&quot;               &quot;BGM-1137&quot;               &quot;BGM-1164&quot;              
+ [70] &quot;BGM-1176-M&quot;             &quot;BGM-1178&quot;               &quot;BGM-1190&quot;              
+ [73] &quot;BGM-1191&quot;               &quot;BGM-1198&quot;               &quot;BGM-1218&quot;              
+ [76] &quot;BGM-1236&quot;               &quot;BGM-1252&quot;               &quot;BGM-1253&quot;              
+ [79] &quot;BGM-1255&quot;               &quot;BGM-1257&quot;               &quot;BGM-1295&quot;              
+ [82] &quot;BGM-1303&quot;               &quot;BGM-1305&quot;               &quot;BGM-1327&quot;              
+ [85] &quot;BGM-1355&quot;               &quot;BGM-1390&quot;               &quot;BGM-1393&quot;              
+ [88] &quot;BGM-1398&quot;               &quot;BGM-1423&quot;               &quot;BGM-1452&quot;              
+ [91] &quot;BGM-1485&quot;               &quot;BGM-1496&quot;               &quot;BGM-1502&quot;              
+ [94] &quot;BGM-1502-M&quot;             &quot;BGM-1569&quot;               &quot;BGM-1583&quot;              
+ [97] &quot;BGM-1660&quot;               &quot;BGM-1668&quot;               &quot;BGM-1695&quot;              
+[100] &quot;BGM-1696&quot;               &quot;BGM-1723&quot;               &quot;BGM-1741&quot;              
+[103] &quot;BGM-1753&quot;               &quot;BGM-1759&quot;               &quot;BGM-1759(B)&quot;           
+[106] &quot;BGM-1828&quot;               &quot;BGM-1876&quot;               &quot;BGM-1942&quot;              
+[109] &quot;BGM-2034&quot;               &quot;BGM-2048&quot;               &quot;BGM-2055&quot;              
+[112] &quot;BGM-2082&quot;               &quot;BGM-2091&quot;               &quot;BGM-2103&quot;              
+[115] &quot;BGM-2114&quot;               &quot;BGM-2117&quot;               &quot;BGM-2123&quot;              
+[118] &quot;BGM-2162&quot;               &quot;BGM-2180&quot;               &quot;BGM-2208&quot;              
+[121] &quot;BGM-2211&quot;               &quot;BGM-2212&quot;               &quot;BGM-2230&quot;              
+[124] &quot;BGM-2260&quot;               &quot;BGM-2284&quot;               &quot;BGM-2294&quot;              
+[127] &quot;BGM-2326&quot;               &quot;BGM-2337&quot;               &quot;BGM-2339&quot;              
+[130] &quot;BGM-2344&quot;               &quot;BGM-2346&quot;               &quot;BGM-2358&quot;              
+[133] &quot;BR-11-34-41&quot;            &quot;BRS-396&quot;                &quot;BRS-Formosa&quot;           
+[136] &quot;BRS-Formosa-Tetra&quot;      &quot;BRS-Tapioqueira&quot;        &quot;Conquista-1&quot;           
+[139] &quot;CPAFRO-05&quot;              &quot;CPAFRO-06&quot;              &quot;CPAFRO-09&quot;             
+[142] &quot;CPAFRO-27&quot;              &quot;CPAFRO-33&quot;              &quot;CPAFRO-35&quot;             
+[145] &quot;Guaira-Falsa&quot;           &quot;Platina&quot;                &quot;Rangel-Fadel&quot;          
+[148] &quot;Sao Francisco de Paula&quot; &quot;Secundina&quot;             
+
+$CoreHunter
+  [1] &quot;BGM-0004&quot;     &quot;BGM-0016&quot;     &quot;BGM-0017&quot;     &quot;BGM-0020&quot;     &quot;BGM-0021&quot;    
+  [6] &quot;BGM-0043&quot;     &quot;BGM-0076&quot;     &quot;BGM-0098&quot;     &quot;BGM-0117&quot;     &quot;BGM-0119&quot;    
+ [11] &quot;BGM-0143&quot;     &quot;BGM-0184&quot;     &quot;BGM-0212&quot;     &quot;BGM-0222&quot;     &quot;BGM-0239&quot;    
+ [16] &quot;BGM-0247&quot;     &quot;BGM-0260&quot;     &quot;BGM-0267&quot;     &quot;BGM-0282&quot;     &quot;BGM-0294&quot;    
+ [21] &quot;BGM-0297&quot;     &quot;BGM-0357&quot;     &quot;BGM-0364&quot;     &quot;BGM-0366&quot;     &quot;BGM-0383&quot;    
+ [26] &quot;BGM-0413&quot;     &quot;BGM-0423&quot;     &quot;BGM-0428&quot;     &quot;BGM-0461&quot;     &quot;BGM-0472&quot;    
+ [31] &quot;BGM-0484&quot;     &quot;BGM-0494&quot;     &quot;BGM-0509&quot;     &quot;BGM-0514&quot;     &quot;BGM-0521&quot;    
+ [36] &quot;BGM-0540&quot;     &quot;BGM-0606&quot;     &quot;BGM-0609&quot;     &quot;BGM-0610&quot;     &quot;BGM-0639&quot;    
+ [41] &quot;BGM-0661&quot;     &quot;BGM-0685&quot;     &quot;BGM-0697&quot;     &quot;BGM-0752&quot;     &quot;BGM-0779&quot;    
+ [46] &quot;BGM-0829&quot;     &quot;BGM-0830&quot;     &quot;BGM-0834&quot;     &quot;BGM-0842&quot;     &quot;BGM-0859&quot;    
+ [51] &quot;BGM-0872&quot;     &quot;BGM-0878&quot;     &quot;BGM-0885&quot;     &quot;BGM-0893&quot;     &quot;BGM-0934&quot;    
+ [56] &quot;BGM-0944&quot;     &quot;BGM-0948&quot;     &quot;BGM-0953&quot;     &quot;BGM-0962&quot;     &quot;BGM-0975&quot;    
+ [61] &quot;BGM-0976&quot;     &quot;BGM-1037&quot;     &quot;BGM-1043&quot;     &quot;BGM-1082&quot;     &quot;BGM-1088&quot;    
+ [66] &quot;BGM-1110&quot;     &quot;BGM-1116&quot;     &quot;BGM-1118&quot;     &quot;BGM-1140&quot;     &quot;BGM-1142&quot;    
+ [71] &quot;BGM-1195&quot;     &quot;BGM-1236&quot;     &quot;BGM-1248&quot;     &quot;BGM-1254&quot;     &quot;BGM-1257&quot;    
+ [76] &quot;BGM-1266&quot;     &quot;BGM-1272&quot;     &quot;BGM-1283&quot;     &quot;BGM-1288&quot;     &quot;BGM-1298&quot;    
+ [81] &quot;BGM-1308&quot;     &quot;BGM-1309&quot;     &quot;BGM-1329&quot;     &quot;BGM-1362&quot;     &quot;BGM-1363&quot;    
+ [86] &quot;BGM-1379&quot;     &quot;BGM-1389&quot;     &quot;BGM-1395&quot;     &quot;BGM-1398&quot;     &quot;BGM-1401&quot;    
+ [91] &quot;BGM-1402&quot;     &quot;BGM-1415&quot;     &quot;BGM-1420&quot;     &quot;BGM-1425&quot;     &quot;BGM-1442&quot;    
+ [96] &quot;BGM-1458&quot;     &quot;BGM-1468&quot;     &quot;BGM-1472&quot;     &quot;BGM-1476&quot;     &quot;BGM-1481&quot;    
+[101] &quot;BGM-1516&quot;     &quot;BGM-1521&quot;     &quot;BGM-1543&quot;     &quot;BGM-1549&quot;     &quot;BGM-1563&quot;    
+[106] &quot;BGM-1585&quot;     &quot;BGM-1604&quot;     &quot;BGM-1618&quot;     &quot;BGM-1640&quot;     &quot;BGM-1677&quot;    
+[111] &quot;BGM-1697&quot;     &quot;BGM-1699&quot;     &quot;BGM-1711&quot;     &quot;BGM-1714&quot;     &quot;BGM-1727&quot;    
+[116] &quot;BGM-1728&quot;     &quot;BGM-1733&quot;     &quot;BGM-1739&quot;     &quot;BGM-1744&quot;     &quot;BGM-1751&quot;    
+[121] &quot;BGM-1757&quot;     &quot;BGM-1766&quot;     &quot;BGM-2022&quot;     &quot;BGM-2061&quot;     &quot;BGM-2062&quot;    
+[126] &quot;BGM-2071&quot;     &quot;BGM-2072&quot;     &quot;BGM-2073&quot;     &quot;BGM-2078&quot;     &quot;BGM-2085&quot;    
+[131] &quot;BGM-2096&quot;     &quot;BGM-2101&quot;     &quot;BGM-2126&quot;     &quot;BGM-2133&quot;     &quot;BGM-2135&quot;    
+[136] &quot;BGM-2140&quot;     &quot;BGM-2162&quot;     &quot;BGM-2182&quot;     &quot;BGM-2191&quot;     &quot;BGM-2192&quot;    
+[141] &quot;BGM-2193&quot;     &quot;BGM-2200&quot;     &quot;BGM-2202&quot;     &quot;BGM-2205&quot;     &quot;BGM-2206&quot;    
+[146] &quot;BGM-2208&quot;     &quot;BGM-2209&quot;     &quot;BGM-2253&quot;     &quot;BGM-2294&quot;     &quot;BGM-2342&quot;    
+[151] &quot;BGM-2354&quot;     &quot;BR-11-24-156&quot; &quot;BR-11-34-41&quot;  &quot;BR-11-34-69&quot;  &quot;BRS-Formosa&quot; 
+[156] &quot;CPAFRO-35&quot;   
+
+$DARWin
+  [1] &quot;BGM-0014&quot;        &quot;BGM-0016&quot;        &quot;BGM-0020&quot;        &quot;BGM-0025&quot;       
+  [5] &quot;BGM-0040&quot;        &quot;BGM-0043&quot;        &quot;BGM-0054&quot;        &quot;BGM-0117&quot;       
+  [9] &quot;BGM-0134&quot;        &quot;BGM-0140&quot;        &quot;BGM-0221&quot;        &quot;BGM-0236&quot;       
+ [13] &quot;BGM-0241&quot;        &quot;BGM-0294&quot;        &quot;BGM-0295&quot;        &quot;BGM-0297&quot;       
+ [17] &quot;BGM-0342&quot;        &quot;BGM-0378&quot;        &quot;BGM-0419&quot;        &quot;BGM-0424&quot;       
+ [21] &quot;BGM-0440&quot;        &quot;BGM-0444&quot;        &quot;BGM-0456&quot;        &quot;BGM-0460&quot;       
+ [25] &quot;BGM-0461&quot;        &quot;BGM-0465&quot;        &quot;BGM-0467&quot;        &quot;BGM-0474&quot;       
+ [29] &quot;BGM-0492&quot;        &quot;BGM-0550&quot;        &quot;BGM-0561&quot;        &quot;BGM-0565&quot;       
+ [33] &quot;BGM-0570&quot;        &quot;BGM-0575&quot;        &quot;BGM-0585&quot;        &quot;BGM-0593&quot;       
+ [37] &quot;BGM-0624&quot;        &quot;BGM-0626&quot;        &quot;BGM-0639&quot;        &quot;BGM-0652&quot;       
+ [41] &quot;BGM-0657&quot;        &quot;BGM-0662&quot;        &quot;BGM-0668&quot;        &quot;BGM-0671&quot;       
+ [45] &quot;BGM-0706&quot;        &quot;BGM-0713&quot;        &quot;BGM-0714&quot;        &quot;BGM-0726&quot;       
+ [49] &quot;BGM-0737&quot;        &quot;BGM-0779&quot;        &quot;BGM-0793&quot;        &quot;BGM-0808&quot;       
+ [53] &quot;BGM-0819&quot;        &quot;BGM-0822&quot;        &quot;BGM-0842&quot;        &quot;BGM-0872&quot;       
+ [57] &quot;BGM-0889&quot;        &quot;BGM-0893&quot;        &quot;BGM-0894&quot;        &quot;BGM-0914&quot;       
+ [61] &quot;BGM-0925&quot;        &quot;BGM-0931&quot;        &quot;BGM-0944&quot;        &quot;BGM-0945&quot;       
+ [65] &quot;BGM-0953&quot;        &quot;BGM-0959&quot;        &quot;BGM-0960&quot;        &quot;BGM-0962&quot;       
+ [69] &quot;BGM-0971&quot;        &quot;BGM-0974&quot;        &quot;BGM-0975&quot;        &quot;BGM-0984&quot;       
+ [73] &quot;BGM-0993&quot;        &quot;BGM-0998&quot;        &quot;BGM-1041&quot;        &quot;BGM-1053&quot;       
+ [77] &quot;BGM-1091&quot;        &quot;BGM-1127&quot;        &quot;BGM-1128&quot;        &quot;BGM-1144&quot;       
+ [81] &quot;BGM-1146&quot;        &quot;BGM-1178&quot;        &quot;BGM-1183&quot;        &quot;BGM-1184&quot;       
+ [85] &quot;BGM-1186&quot;        &quot;BGM-1195&quot;        &quot;BGM-1198&quot;        &quot;BGM-1210&quot;       
+ [89] &quot;BGM-1295&quot;        &quot;BGM-1338&quot;        &quot;BGM-1354&quot;        &quot;BGM-1358&quot;       
+ [93] &quot;BGM-1363&quot;        &quot;BGM-1389&quot;        &quot;BGM-1400&quot;        &quot;BGM-1441&quot;       
+ [97] &quot;BGM-1448&quot;        &quot;BGM-1456&quot;        &quot;BGM-1482&quot;        &quot;BGM-1511&quot;       
+[101] &quot;BGM-1525&quot;        &quot;BGM-1549&quot;        &quot;BGM-1558&quot;        &quot;BGM-1581&quot;       
+[105] &quot;BGM-1632&quot;        &quot;BGM-1633&quot;        &quot;BGM-1657&quot;        &quot;BGM-1674&quot;       
+[109] &quot;BGM-1698&quot;        &quot;BGM-1699&quot;        &quot;BGM-1713&quot;        &quot;BGM-1714&quot;       
+[113] &quot;BGM-1724&quot;        &quot;BGM-1744&quot;        &quot;BGM-1766&quot;        &quot;BGM-1769&quot;       
+[117] &quot;BGM-1772&quot;        &quot;BGM-1779&quot;        &quot;BGM-1828&quot;        &quot;BGM-1830&quot;       
+[121] &quot;BGM-1942&quot;        &quot;BGM-1957&quot;        &quot;BGM-1981&quot;        &quot;BGM-1999&quot;       
+[125] &quot;BGM-2026&quot;        &quot;BGM-2028&quot;        &quot;BGM-2058&quot;        &quot;BGM-2063&quot;       
+[129] &quot;BGM-2070&quot;        &quot;BGM-2085&quot;        &quot;BGM-2091&quot;        &quot;BGM-2108&quot;       
+[133] &quot;BGM-2120&quot;        &quot;BGM-2127&quot;        &quot;BGM-2180&quot;        &quot;BGM-2193&quot;       
+[137] &quot;BGM-2209&quot;        &quot;BGM-2226&quot;        &quot;BGM-2233&quot;        &quot;BGM-2281&quot;       
+[141] &quot;BGM-2293&quot;        &quot;BGM-2294&quot;        &quot;BGM-2345&quot;        &quot;BGM-2346&quot;       
+[145] &quot;BGM-2352&quot;        &quot;BR-12-107-02&quot;    &quot;BRS-Caipira&quot;     &quot;BRS-Poti-Branca&quot;
+[149] &quot;CPAFRO-05&quot;       &quot;CPAFRO-18&quot;       &quot;CPAFRO-33&quot;       &quot;CPAFRO-42&quot;      
+[153] &quot;SE-09&quot;           &quot;Secundina&quot;      </code></pre>
+<pre class="r"><code>sink()</code></pre>
+<div id="fig-8.-final-venn-diagram-for-the-three-groups-of-nuclear-collections" class="section level4">
+<h4>Fig 8. Final Venn diagram for the three groups of Nuclear Collections</h4>
+<p><img src="figure/DivGen.Rmd/Fig%208-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>Back - <a href="AnDis.html">Análises Descritivas</a></p>
 <p><a href="index.html">Home</a></p>
 <br>
@@ -1851,6 +2678,7 @@ loaded via a namespace (and not attached):
 [73] reactR_0.4.4      assertthat_0.2.1  xfun_0.31         broom_0.8.0      
 [77] rstatix_0.7.0     later_1.3.0       viridisLite_0.4.0 workflowr_1.7.0  
 [81] ellipsis_0.3.2   </code></pre>
+</div>
 </div>
 </div>
 </div>

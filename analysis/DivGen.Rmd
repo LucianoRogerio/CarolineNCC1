@@ -205,6 +205,10 @@ VennDPNC <- list(
 VD1 <- ggvenn(VennDPNC, fill_color = c("red", "blue", "green"),
               fill_alpha = 0.6, set_name_size = 5)
 
+sink(file = here::here("output", "ClonesSelCCPhen.txt"))
+VennDPNC
+sink()
+
 VennDGNC1 <- list(
   `MR/SH` = rownames(SelCC)[SelCC$`MR/SH` == 1],
   `CE/SH` = rownames(SelCC)[SelCC$`CE/SH` == 1],
@@ -213,12 +217,21 @@ VennDGNC1 <- list(
 VD2 <- ggvenn(VennDGNC1, fill_color = c("red", "blue", "green", "yellow"),
               fill_alpha = 0.6, set_name_size = 5)
 
+sink(file = here::here("output", "ClonesSelCCGenCoreHunter.txt"))
+VennDGNC1
+sink()
+
+
 VennDGNC2 <- list(
   `AM/MLST` = rownames(SelCC)[SelCC$`AM/MLST` == 1],
   `MR/MLST` = rownames(SelCC)[SelCC$`MR/MLST` == 1],
   `CE/MLST` = rownames(SelCC)[SelCC$`CE/MLST` == 1])
 VD3 <- ggvenn(VennDGNC2, fill_color = c("red", "blue", "green"),
               fill_alpha = 0.6, set_name_size = 5) 
+
+sink(file = here::here("output", "ClonesSelCCGenDARwin.txt"))
+VennDGNC2
+sink()
 ```
 
 
@@ -631,6 +644,42 @@ reactable(SHSelFinal, columns = list(
   SHsd = colDef(format = colFormat(digits = 3, locales = "en-US"))))
 ```
 
+### Final Venn diagram for each Nuclear Collection Group
+
+```{r}
+
+SelCC <- tibble(Clones = BAGClones)
+CCFMet <- unique(Alldataset$Method)
+
+for(i in CCFMet){
+  Common <- BAGClones %in% Alldataset$Acessos[Alldataset$Method == i] %>%
+    as.numeric %>% as.data.frame
+  colnames(Common) <- i
+  SelCC <- cbind(SelCC, Common)
+}
+row.names(SelCC) <- SelCC$Clones
+SelCC$Clones <- NULL
+
+
+library(ggvenn)
+VennFinal <- list(
+  Pheno = rownames(SelCC)[SelCC$Pheno == 1],
+  CoreHunter = rownames(SelCC)[SelCC$CoreHunter == 1],
+  DARWin = rownames(SelCC)[SelCC$DARWin == 1])
+VDFinal <- ggvenn(VennFinal, fill_color = c("red", "blue", "green"),
+              fill_alpha = 0.6, set_name_size = 5)
+
+sink(file = here::here("output", "ClonesSelCCFinal.txt"))
+VennFinal
+sink()
+```
+
+
+
+#### Fig 8. Final Venn diagram for the three groups of Nuclear Collections
+```{r Fig 8, fig.height = 12, echo = FALSE}
+VDFinal
+```
 
 
 Back - [Análises Descritivas](AnDis.html)
