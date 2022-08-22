@@ -97,9 +97,9 @@ write.table(DataCarCCGeno9, file = here::here("output", "CCGenData", "DadosCCGen
 ```{r AM/MLST DARwin, eval = F}
 CCSelAM.DARwin <- read.table(here::here("output", "CarDarwinMatrix.don"),
                              sep = "\t", header = T,skip = 2,
-                             nrows = 1363)
-table(CCSelAM.DARwin$Tree.Sample_181)
-ClonesSel <- CCSelAM.DARwin %>% filter(Tree.Sample_181 == "Kept") %>%
+                             nrows = 1486)
+table(CCSelAM.DARwin$Tree.Sample_166)
+ClonesSel <- CCSelAM.DARwin %>% filter(Tree.Sample_166 == "Kept") %>%
   select(N)
 DataCarCCGeno10 <- DataCar[DataCar$Acessos%in%ClonesSel$N,]
 
