@@ -139,6 +139,57 @@ Table2SH %>% reactable(defaultPageSize = 15, columns = list(
   'Geno - CE/MLST' = colDef(format = colFormat(digits = 3, locales = "en-US"))))
 ```
 
+## Mean and variance of each Nuclear Collection
+
+```{r Mean and Variance of Nuclear Collections}
+AlldataSetQuant %>% group_by(Data, Method) %>%
+  summarise(ComprFilotaxiaMean = mean(ComprFilotaxia, na.rm = T),
+            ComprFilotaxiaVar = var(ComprFilotaxia, na.rm = T),
+            ComprLobuloMean = mean(ComprLobulo, na.rm = T),
+            ComprLobuloVar = var(ComprLobulo, na.rm = T),
+            LargLobuloMean = mean(LargLobulo, na.rm = T),
+            LargLobuloVar = var(LargLobulo, na.rm = T),
+            RelComprLarMean = mean(RelComprLar, na.rm = T),
+            RelComprLaraVar = var(RelComprLar, na.rm = T),
+            ComprPecioloMean = mean(ComprPeciolo, na.rm = T),
+            ComprPecioloVar = var(ComprPeciolo, na.rm = T),
+            EspEntreCascaMean = mean(EspEntreCasca, na.rm = T),
+            EspEntreCascaVar = var(EspEntreCasca, na.rm = T),
+            ComprMedRzsMean = mean(ComprMedRzs, na.rm = T),
+            ComprMedRzsVar = var(ComprMedRzs, na.rm = T),
+            DiamMedRzsMean = mean(DiamMedRzs, na.rm = T),
+            DiamMedRzsVar = var(DiamMedRzs, na.rm = T),
+            HCNPicMean = mean(HCNPic, na.rm = T),
+            HCNPicVar = var(HCNPic, na.rm = T),
+            NRMean = mean(NR, na.rm = T),
+            NRVar = var(NR, na.rm = T),
+            PAMean = mean(PA, na.rm = T),
+            PAVar = var(PA, na.rm = T),
+            DRYMean = mean(DRY, na.rm = T),
+            DRYVar = var(DRY, na.rm = T),
+            DMCsgMean = mean(DMCsg, na.rm = T),
+            DMCsgVar = var(DMCsg, na.rm = T),
+            PTRMean = mean(PTR, na.rm = T),
+            PTRVar = var(PTR, na.rm = T),
+            PPAMean = mean(PPA, na.rm = T),
+            PPAVar = var(PPA, na.rm = T),
+            ICMean = mean(IC, na.rm = T),
+            ICVar = var(IC, na.rm = T),
+            APMean = mean(AP, na.rm = T),
+            APVar = var(AP, na.rm = T)) -> NCMeanVar
+write.table(NCMeanVar, file = here::here("output", "MeansVarNC.csv"),
+            quote = F, row.names = F, sep = ",")
+```
+
+### **Table 3.** Means and variances for Nuclear Collections of quantitative traits 
+```{r Table 3, echo = FALSE}
+library(reactable)
+NCMeanVar %>%
+  reactable::reactable(defaultColDef = colDef(format = colFormat(digits = 2,
+                                                                 locales = "en-us")))
+```
+
+
 ## Grouping of Nuclear Collection methods by Kappa index
 
 ```{r kappa Index estimation}
@@ -177,8 +228,8 @@ write.table(Kappa, file = here::here("output", "KappaIndex.csv"), sep = ",",
             quote = F)
 ```
 
-#### **Table 3.** Kappa Index for coincidence of the clone selection for the 12 nuclear collections.
-```{r Table 3, echo = FALSE}
+#### **Table 4.** Kappa Index for coincidence of the clone selection for the 12 nuclear collections.
+```{r Table 4, echo = FALSE}
 library(reactable)
 Kappa %>% reactable(defaultPageSize = 15)
 ```
@@ -259,8 +310,8 @@ SHSelPhen <- data.frame(Method = colnames(SHRelPhen),
                         row.names = NULL)
 ```
 
-#### **Table 4.** Mean improvement of the Shannon-Weaver diversity index in % of nuclear core collections estimated of Phenotypic data compared to the Bank of Germplasm
-```{r Table 4, echo = FALSE}
+#### **Table 5.** Mean improvement of the Shannon-Weaver diversity index in % of nuclear core collections estimated of Phenotypic data compared to the Bank of Germplasm
+```{r Table 5, echo = FALSE}
 reactable(SHSelPhen, columns = list(
   SHMeanImprov = colDef(format = colFormat(digits = 3, locales = "en-US")),
   SHsd = colDef(format = colFormat(digits = 3, locales = "en-US"))))
@@ -291,8 +342,8 @@ SHSelGen <- data.frame(Method = colnames(SHRelGen),
                         row.names = NULL)
 ```
 
-#### **Table 5.** Mean improvement of the Shannon-Weaver diversity index in % of nuclear core collections estimated of Genotypic data compared to the Bank of Germplasm
-```{r Table 5, echo = FALSE}
+#### **Table 6.** Mean improvement of the Shannon-Weaver diversity index in % of nuclear core collections estimated of Genotypic data compared to the Bank of Germplasm
+```{r Table 6, echo = FALSE}
 reactable(SHSelGen, columns = list(
   SHMeanImprov = colDef(format = colFormat(digits = 3, locales = "en-US")),
   SHsd = colDef(format = colFormat(digits = 3, locales = "en-US"))))
@@ -336,9 +387,9 @@ AlldataSetQuant2 <- reshape2::melt(AlldataSetQuant, id.vars = c("Acessos", "Meth
        variable.name = "Trait", value.name = "Value")
 ```
 
-#### **Table 6.** Formato da entrado do objeto para realizar o boxplot
+#### **Table 7.** Formato da entrado do objeto para realizar o boxplot
 
-```{r Table 6, echo = FALSE}
+```{r Table 7, echo = FALSE}
 reactable(AlldataSetQuant2, columns = list(Value = colDef(format = colFormat(digits = 2, locales = "en-US"))))
 ```
 
@@ -401,9 +452,9 @@ AlldataSetQuali3$Score <- factor(AlldataSetQuali3$Score,
                                             140, 150, 160))
 ```
 
-#### **Table 7.** Formato da entrado do objeto para realizar o barplot
+#### **Table 8.** Formato da entrado do objeto para realizar o barplot
 
-```{r Table 7, echo = FALSE}
+```{r Table 8, echo = FALSE}
 reactable(AlldataSetQuali3)
 ```
 
@@ -557,8 +608,8 @@ write.table(Table3SH, file = here::here("output", "Shannon-WeaverCCFinalQuantInd
 ```
 
 
-#### **Table 8.** Shannon-Weaver indexes for Cassava quantitative traits of the Bank of germplasm and 3 nuclear core collections.
-```{r Table 8, echo = FALSE}
+#### **Table 9.** Shannon-Weaver indexes for Cassava quantitative traits of the Bank of germplasm and 3 nuclear core collections.
+```{r Table 9, echo = FALSE}
 Table3SH %>% reactable(defaultPageSize = 16, columns = list(
   BAG = colDef(format = colFormat(digits = 3, locales = "en-US")),
   Pheno = colDef(format = colFormat(digits = 3, locales = "en-US")),
@@ -611,8 +662,8 @@ SHInd <- as.data.frame(rbind(Table3SH, Table4SH))
 ```
 
 
-#### **Table 9.** Shannon-Weaver indexes for Cassava quality traits of the Bank of germplasm and 3 nuclear core collections.
-```{r Table 9, echo = FALSE}
+#### **Table 10.** Shannon-Weaver indexes for Cassava quality traits of the Bank of germplasm and 3 nuclear core collections.
+```{r Table 10, echo = FALSE}
 Table4SH %>% reactable(defaultPageSize = 15, columns = list(
   BAG = colDef(format = colFormat(digits = 3, locales = "en-US")),
   Pheno = colDef(format = colFormat(digits = 3, locales = "en-US")),
@@ -637,12 +688,65 @@ SHSelFinal <- data.frame(Method = colnames(SHRelFinal),
                         row.names = NULL)
 ```
 
-#### **Table 10.** Mean improvement of the Shannon-Weaver diversity index in % of nuclear core collections estimated of Phenotypic data compared to the Bank of Germplasm
-```{r Table 10, echo = FALSE}
+#### **Table 11.** Mean improvement of the Shannon-Weaver diversity index in % of nuclear core collections estimated of Phenotypic data compared to the Bank of Germplasm
+```{r Table 11, echo = FALSE}
 reactable(SHSelFinal, columns = list(
   SHMeanImprov = colDef(format = colFormat(digits = 3, locales = "en-US")),
   SHsd = colDef(format = colFormat(digits = 3, locales = "en-US"))))
 ```
+
+## Mean and variance of each Nuclear Collection
+
+```{r Mean and Variance of Final Nuclear Collections}
+AlldataSetQuant$Method <- factor(AlldataSetQuant$Method,
+                                 levels = c("BAG", "Pheno", "CoreHunter", "DARWin", "NCSel"))
+AlldataSetQuant %>% group_by(Method) %>%
+  summarise(ComprFilotaxiaMean = mean(ComprFilotaxia, na.rm = T),
+            ComprFilotaxiaVar = var(ComprFilotaxia, na.rm = T),
+            ComprLobuloMean = mean(ComprLobulo, na.rm = T),
+            ComprLobuloVar = var(ComprLobulo, na.rm = T),
+            LargLobuloMean = mean(LargLobulo, na.rm = T),
+            LargLobuloVar = var(LargLobulo, na.rm = T),
+            RelComprLarMean = mean(RelComprLar, na.rm = T),
+            RelComprLaraVar = var(RelComprLar, na.rm = T),
+            ComprPecioloMean = mean(ComprPeciolo, na.rm = T),
+            ComprPecioloVar = var(ComprPeciolo, na.rm = T),
+            EspEntreCascaMean = mean(EspEntreCasca, na.rm = T),
+            EspEntreCascaVar = var(EspEntreCasca, na.rm = T),
+            ComprMedRzsMean = mean(ComprMedRzs, na.rm = T),
+            ComprMedRzsVar = var(ComprMedRzs, na.rm = T),
+            DiamMedRzsMean = mean(DiamMedRzs, na.rm = T),
+            DiamMedRzsVar = var(DiamMedRzs, na.rm = T),
+            HCNPicMean = mean(HCNPic, na.rm = T),
+            HCNPicVar = var(HCNPic, na.rm = T),
+            NRMean = mean(NR, na.rm = T),
+            NRVar = var(NR, na.rm = T),
+            PAMean = mean(PA, na.rm = T),
+            PAVar = var(PA, na.rm = T),
+            DRYMean = mean(DRY, na.rm = T),
+            DRYVar = var(DRY, na.rm = T),
+            DMCsgMean = mean(DMCsg, na.rm = T),
+            DMCsgVar = var(DMCsg, na.rm = T),
+            PTRMean = mean(PTR, na.rm = T),
+            PTRVar = var(PTR, na.rm = T),
+            PPAMean = mean(PPA, na.rm = T),
+            PPAVar = var(PPA, na.rm = T),
+            ICMean = mean(IC, na.rm = T),
+            ICVar = var(IC, na.rm = T),
+            APMean = mean(AP, na.rm = T),
+            APVar = var(AP, na.rm = T)) -> NCMeanVar
+write.table(NCMeanVar, file = here::here("output", "MeansVarNCFinal.csv"),
+            quote = F, row.names = F, sep = ",")
+```
+
+### **Table 12.** Means and variances for Nuclear Collections of quantitative traits 
+```{r Table 12, echo = FALSE}
+library(reactable)
+NCMeanVar %>%
+  reactable::reactable(defaultColDef = colDef(format = colFormat(digits = 2,
+                                                                 locales = "en-us")))
+```
+
 
 ### Final Venn diagram for each Nuclear Collection Group
 

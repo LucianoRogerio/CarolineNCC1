@@ -52,7 +52,7 @@ dev.off()
 ### Venn Diagrams DivGen Rmd
 tiff(filename = "output/Figures/VennDiagram.tiff", res = 400, units = "cm",
      compression = "lzw", width = 20, height = 25)
-ggarrange(VD1, VD3, VD2, ncol = 1, labels = "AUTO", heights = c(2,1.3,2))
+ggarrange(VD1, VD3, VD2, ncol = 1, labels = "AUTO", heights = c(2.3,2.3,2))
 dev.off()
 
 
