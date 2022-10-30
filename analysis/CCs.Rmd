@@ -1,0 +1,78 @@
+---
+title: "Coleções Nucleares"
+author: "LucianoRogerio; Caroline Cardoso"
+date: "2021-10-25"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+## Coleções Nucleares
+
+```{r lendo dados fenotipicos, eval = FALSE}
+suppressMessages(library(tidyverse))
+DataCar <- readRDS(file = here::here("output", "DataSelPreparedCar.rds"))
+GBSDataCar <- readRDS(file = here::here("data", "DadosGBSCaroline2.rds"))
+
+CCSize <- round(nrow(DataCar) * 0.1, digits = 0)
+```
+
+### Coleção Nuclear com Dados Fenotípicos e Genotípicos
+
+Otimização por - AN Average accession-to-nearest-entry distance
+Distância - MR Modified Rogers distance
+
+```{r Estimacacao da Primeira colecao nuclear, eval = FALSE}
+library(corehunter); library(StatMatch)
+
+# Transformando os arquivos para leitura
+phenotypes <- phenotypes(DataCar)
+phenotypes
+genotypes <- genotypes(GBSDataCar, format = "biparental")
+genotypes
+my.data <- coreHunterData(genotypes,phenotypes)
+my.data
+
+set.seed(1234)
+CCGenPhen <- sampleCore(my.data, objective(type = "AN"), size = CCSize)
+DataCarCCGenPhen <- DataCar[rownames(DataCar)%in%CCGenPhen$sel,]
+saveRDS(CCGenPhen, file = "coreGenPhen.rds")
+write.table(DataCarCCGenPhen, here::here("output", "CCData", "DadosCCGP.csv"),
+            quote = F, sep = ";", dec = ".")
+```
+
+### Coleção Nuclear com Dados Fenotípicos
+
+Otimização por - AN Average accession-to-nearest-entry distance
+Distância - GD Gower distance
+
+```{r Estimacacao da Segunda colecao nuclear, eval = FALSE}
+set.seed(1234)
+CCPhen <- sampleCore(phenotypes, objective(type = "AN", measure = "GD"), size = CCSize)
+DataCarCCPhen <- DataCar[rownames(DataCar)%in%CCPhen$sel,]
+saveRDS(CCPhen, file = "corePheno.rds")
+write.table(DataCarCCPhen, here::here("output", "CCData", "DadosCCPhen.csv"),
+            quote = F, sep = ";", dec = ".")
+```
+
+
+### Coleção Nuclear com Dados Genotípicos
+
+Otimização por - AN Average accession-to-nearest-entry distance
+
+
+```{r, Estimacao da Terceira colecao nuclear, eval = FALSE}
+set.seed(1234)
+CCGen <- sampleCore(genotypes,objective(type = "AN"), size = CCSize)
+DataCarCCGen <- DataCar[rownames(DataCar)%in%CCGen$sel,]
+saveRDS(CCGeno, file="coreGeno.rds")
+write.table(DataCarCCGen, here::here("output", "CCData", "DadosCCGen.csv"),
+            quote = F, sep = ";", dec = ".")
+```
+
+
+Back - [Dados Fenotípicos e Genotípicos](PhenoGenoData.html)
+
+Next - [Coleções Nucleares Genotípicas](CNGeno.html)
+
+[Home](index.html)

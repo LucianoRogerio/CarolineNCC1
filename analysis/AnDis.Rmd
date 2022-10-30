@@ -7,169 +7,64 @@ editor_options:
   chunk_output_type: console
 ---
 
-Boxplot de coleções nucleares - Características Quantitativas
-=============================================================
+# Boxplot de coleções nucleares - Características Quantitativas
 
 ### Obter Dados Fenotípicos
 
-#### Coleções nucleares - Dados Fenotipicos
+#### Coleções nucleares
 
-```{r Lendo os dados das Colecoes Nucleares Fenotipicas}
+```{r Lendo os dados das Colecoes Nucleares}
 suppressMessages(library(tidyverse)); suppressMessages(library(here)); suppressMessages(library(reshape2))
 suppressMessages(library(reactable))
 
-Method1 <- read.table(here::here("output", "CCPhenData", "DadosCCPheno1.CSV"), header = T,
+Method1 <- read.table(here::here("output", "CCData", "DadosCCGP.csv"), header = T,
                       sep = ";", dec = ".",
-                      colClasses = c(rep("character", times = 31),
+                      colClasses = c(rep("character", times = 30),
                                     rep("numeric", times = 3),
                                     "character",
-                                    rep("numeric", times = 16)))
+                                    rep("numeric", times = 16))) %>% 
+  dplyr::mutate(Acessos = rownames(.))
 
 
-Method2 <- read.table(here::here("output", "CCPhenData", "DadosCCPheno2.CSV"), header = T,
+Method2 <- read.table(here::here("output", "CCData", "DadosCCPhen.csv"), header = T,
                       sep = ";", dec = ".",
-                      colClasses = c(rep("character", times = 31),
+                      colClasses = c(rep("character", times = 30),
                                     rep("numeric", times = 3),
                                     "character",
-                                    rep("numeric", times = 16)))
+                                    rep("numeric", times = 16))) %>% 
+  dplyr::mutate(Acessos = rownames(.))
 
 
-Method3 <- read.table(here::here("output", "CCPhenData", "DadosCCPheno3.CSV"), header = T,
+Method3 <- read.table(here::here("output", "CCData", "DadosCCGen.csv"), header = T,
                       sep = ";", dec = ".",
-                      colClasses = c(rep("character", times = 31),
+                      colClasses = c(rep("character", times = 30),
                                     rep("numeric", times = 3),
                                     "character",
-                                    rep("numeric", times = 16)))
-```
-
-#### Coleções Nucleares - dados Moleculares
-
-```{r Lendo os dados das Colecoes Nucleares Genotipicas}
-Method4 <- read.table(here::here("output", "CCGenData", "DadosCCGeno1.CSV"), header = T, 
-                      sep = ";", dec = ".",
-                      colClasses = c(rep("character", times = 31),
-                                    rep("numeric", times = 3),
-                                    "character",
-                                    rep("numeric", times = 16)))
-
-
-Method5 <- read.table(here::here("output", "CCGenData", "DadosCCGeno2.CSV"), header = T, 
-                      sep = ";", dec = ".",
-                      colClasses = c(rep("character", times = 31),
-                                    rep("numeric", times = 3),
-                                    "character",
-                                    rep("numeric", times = 16)))
-
-
-Method6 <- read.table(here::here("output", "CCGenData", "DadosCCGeno3.CSV"), header = T, 
-                      sep = ";", dec = ".",
-                      colClasses = c(rep("character", times = 31),
-                                    rep("numeric", times = 3),
-                                    "character",
-                                    rep("numeric", times = 16)))
-
-Method7 <- read.table(here::here("output", "CCGenData", "DadosCCGeno4.CSV"), header = T,
-                      sep = ";", dec = ".",
-                      colClasses = c(rep("character", times = 31),
-                                    rep("numeric", times = 3),
-                                    "character",
-                                    rep("numeric", times = 16)))
-
-
-Method8 <- read.table(here::here("output", "CCGenData", "DadosCCGeno5.CSV"), header = T,
-                      sep = ";", dec = ".",
-                      colClasses = c(rep("character", times = 31),
-                                    rep("numeric", times = 3),
-                                    "character",
-                                    rep("numeric", times = 16)))
-
-
-Method9 <- read.table(here::here("output", "CCGenData", "DadosCCGeno6.CSV"), header = T,
-                      sep = ";", dec = ".",
-                      colClasses = c(rep("character", times = 31),
-                                    rep("numeric", times = 3),
-                                    "character",
-                                    rep("numeric", times = 16)))
-
-Method10 <- read.table(here::here("output", "CCGenData", "DadosCCGeno7.CSV"), header = T,
-                       sep = ";", dec = ".",
-                       colClasses = c(rep("character", times = 31),
-                                    rep("numeric", times = 3),
-                                    "character",
-                                    rep("numeric", times = 16)))
-
-
-Method11 <- read.table(here::here("output", "CCGenData", "DadosCCGeno8.CSV"), header = T,
-                       sep = ";", dec = ".",
-                      colClasses = c(rep("character", times = 31),
-                                    rep("numeric", times = 3),
-                                    "character",
-                                    rep("numeric", times = 16)))
-
-Method12 <- read.table(here::here("output", "CCGenData", "DadosCCGeno9.CSV"), header = T,
-                       sep = ";", dec = ".",
-                       colClasses = c(rep("character", times = 31),
-                                    rep("numeric", times = 3),
-                                    "character",
-                                    rep("numeric", times = 16)))
+                                    rep("numeric", times = 16))) %>% 
+  dplyr::mutate(Acessos = rownames(.))
 ```
 
 #### Banco de Germoplasma de Mandioca da EMBRAPA Mandioca
 
 ```{r Lendo os dados de todos os acessos do BAG}
-AllBAG <- readRDS(file = here::here("output", "DataSelPreparedCar.rds"))
+AllBAG <- readRDS(file = here::here("output", "DataSelPreparedCar.rds")) %>% 
+  dplyr::mutate(Acessos = rownames(.))
 ```
 
 #### Adicionar informações do Método e tipo de dados utilizados na seleção da Coleção Nuclear
 
 ```{r Preparando as legendas das figuras}
 AllBAG$Data <- rep("BAG", times = nrow(AllBAG))
-AllBAG$Method <- rep("BAG", times = nrow(AllBAG))
 
-Method1$Data <- rep("Pheno", times = nrow(Method1))
-Method1$Method <- rep("GW/CH", times = nrow(Method1))
-
-Method2$Data <- rep("Pheno", times = nrow(Method2))
-Method2$Method <- rep("CH", times = nrow(Method2))
-
-Method3$Data <- rep("Pheno", times = nrow(Method3))
-Method3$Method <- rep("GW/MLST", times = nrow(Method3))
-
-Method4$Data <- rep("Geno", times = nrow(Method4))
-Method4$Method <- rep("MR/SH", times = nrow(Method4))
-
-Method5$Data <- rep("Geno", times = nrow(Method5))
-Method5$Method <- rep("CE/SH", times = nrow(Method5))
-
-Method6$Data <- rep("Geno", times = nrow(Method6))
-Method6$Method <- rep("MR/EH", times = nrow(Method6))
-
-Method7$Data <- rep("Geno", times = nrow(Method7))
-Method7$Method <- rep("CE/EH", times = nrow(Method7))
-
-Method8$Data <- rep("Geno", times = nrow(Method8))
-Method8$Method <- rep("MR/AC", times = nrow(Method8))
-
-Method9$Data <- rep("Geno", times = nrow(Method9))
-Method9$Method <- rep("CE/AC", times = nrow(Method9))
-
-Method10$Data <- rep("Geno", times = nrow(Method10))
-Method10$Method <- rep("AM/MLST", times = nrow(Method10))
-
-Method11$Data <- rep("Geno", times = nrow(Method11))
-Method11$Method <- rep("MR/MLST", times = nrow(Method11))
-
-Method12$Data <- rep("Geno", times = nrow(Method12))
-Method12$Method <- rep("CE/MLST", times = nrow(Method12))
+Method1$Data <- rep("Gen/Phen", times = nrow(Method1))
+Method2$Data <- rep("Phen", times = nrow(Method2))
+Method3$Data <- rep("Gen", times = nrow(Method3))
 ```
 
 #### Juntar todos os Dados das coleções nucleares e do BAG
 
 ```{r Juntando os dados das acolecoes nucleares}
-Alldataset <- rbind(AllBAG, Method1, Method2, Method3,
-                    Method4, Method5, Method6,
-                    Method7, Method8, Method9,
-                    Method10, Method11, Method12)
+Alldataset <- rbind(AllBAG, Method1, Method2, Method3)
 
 saveRDS(Alldataset, here::here("output", "AllDataCCCaroline.RDS"))
 ```
@@ -178,12 +73,12 @@ saveRDS(Alldataset, here::here("output", "AllDataCCCaroline.RDS"))
 
 ```{r Separando as caracteristicas em qualitativas e quantitativas}
 QualityTrait <- colnames(Alldataset)[sapply(X = Alldataset, class) == "character"] %>% 
-  setdiff(., c("Acessos", "Data", "Method"))
+  setdiff(., c("Acessos", "Data"))
 
-AlldataSetQuant <- Alldataset %>% select(-all_of(QualityTrait))
-AlldataSetQuali <- Alldataset %>% select(Acessos, all_of(QualityTrait), Data, Method)
+AlldataSetQuant <- Alldataset %>% dplyr::select(-all_of(QualityTrait))
+AlldataSetQuali <- Alldataset %>% dplyr::select(Acessos, all_of(QualityTrait), Data)
 
-AlldataSetQuant2 <- melt(AlldataSetQuant, id.vars = c("Acessos", "Data", "Method"),
+AlldataSetQuant2 <- reshape2::melt(AlldataSetQuant, id.vars = c("Acessos", "Data"),
        variable.name = "Trait", value.name = "Value")
 ```
 
@@ -195,13 +90,7 @@ reactable(AlldataSetQuant2, columns = list(Value = colDef(format = colFormat(dig
 
 ```{r Ordenando os fatores }
 AlldataSetQuant2$Data <- factor(AlldataSetQuant2$Data,
-                                levels = c("BAG", "Pheno", "Geno"), ordered = T)
-AlldataSetQuant2$Method <- factor(AlldataSetQuant2$Method,
-                                levels = c("BAG", "GW/CH", "GW/MLST", "CH",
-                                           "MR/SH", "MR/EH", "MR/AC", "MR/MLST",
-                                           "CE/SH", "CE/EH", "CE/AC", "CE/MLST",
-                                           "AM/MLST"),
-                                ordered = T)
+                                levels = c("BAG", "Phen", "Gen", "Gen/Phen"), ordered = T)
 ```
 
 ##### Remover os outliers
@@ -218,7 +107,7 @@ filter_lims <- function(x){
 }
 
 
-AlldataSetQuant3 <- AlldataSetQuant2 %>% group_by(Trait, Method) %>%
+AlldataSetQuant3 <- AlldataSetQuant2 %>% group_by(Trait, Data) %>%
   mutate(Value2 = filter_lims(Value))
 ```
 
@@ -235,47 +124,42 @@ Root <- c("EspEntreCasca", "ComprMedRzs", "DiamMedRzs", "HCNPic",
 ```
 
 #### **Fig 1.** Boxplot das características morfológicas de parte aérea
+
 ```{r Fig1, fig.align='center', fig.height=4, echo = FALSE, warning = FALSE}
 AlldataSetQuant3 %>% filter(Trait%in%Foliar) %>%
-  ggplot(mapping = aes(y = Value2, fill = Data, x = Method)) + theme_bw() +
+  ggplot(mapping = aes(y = Value2, fill = Data, x = Data)) + theme_bw() +
   geom_boxplot() + facet_wrap(~Trait, scales = "free_y", ncol = 2) + ylab(NULL) +
   theme(axis.text.x = element_text(angle = 320, hjust = 0.1,
-        colour = c("blue", rep("red", 3), rep("green", 9))))
+        colour = c("blue", "red", "green", "brown")))
 ```
 
 #### **Fig 2.** Boxplot das características morfológicas de Raiz
+
 ```{r Fig2, fig.align='center', fig.height=4, echo = FALSE, warning = FALSE}
 AlldataSetQuant3 %>% filter(Trait%in%Root) %>%
-  ggplot(mapping = aes(y = Value2, fill = Data, x = Method)) + theme_bw() +
+  ggplot(mapping = aes(y = Value2, fill = Data, x = Data)) + theme_bw() +
   geom_boxplot() + facet_wrap(~Trait, scales = "free_y", ncol = 2) + ylab(NULL) +
   theme(axis.text.x = element_text(angle = 320, hjust = 0.1,
-        colour = c("blue", rep("red", 3), rep("green", 9))))
+        colour = c("blue", "red", "green", "brown")))
 
 ```
 
-Barplot de coleções nucleares - Características Qualitativas
-============================================================
+# Barplot de coleções nucleares - Características Qualitativas
 
 ##### Preparar os dados qualitativos para plotar barplot
 
 ```{r Preparando os dados qualitativos}
-AlldataSetQuali2 <- melt(AlldataSetQuali, id.vars = c("Acessos", "Data", "Method"),
+AlldataSetQuali2 <- reshape2::melt(AlldataSetQuali, id.vars = c("Acessos", "Data"),
        variable.name = "Trait", value.name = "Value")
 
 
 AlldataSetQuali3 <- AlldataSetQuali2 %>% filter (!is.na(Value)) %>%
-  group_by(Trait, Data, Method) %>% summarise(N = table(Value, useNA = "no"),
-                                              Score = names(N)) %>%
+  group_by(Trait, Data) %>% summarise(N = table(Value, useNA = "no"),
+                                      Score = names(N)) %>%
   mutate(N = as.numeric(N))
 
 AlldataSetQuali3$Data <- factor(AlldataSetQuali3$Data,
-                                levels = c("BAG", "Pheno", "Geno"), ordered = T)
-AlldataSetQuali3$Method <- factor(AlldataSetQuali3$Method,
-                                levels = c("BAG", "GW/CH", "GW/MLST", "CH",
-                                           "MR/SH", "MR/EH", "MR/AC", "MR/MLST",
-                                           "CE/SH", "CE/EH", "CE/AC", "CE/MLST",
-                                           "AM/MLST"),
-                                ordered = T)
+                                levels = c("BAG", "Phen", "Gen", "Gen/Phen"), ordered = T)
 AlldataSetQuali3$Score <- factor(AlldataSetQuali3$Score,
                                  levels = c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
                                             30, 40, 45, 50, 60, 70, 80, 85, 90,
@@ -307,88 +191,90 @@ traitsRaizFor <- traitsRaiz %>% setdiff(traitsRaizCor)
 ```
 
 #### **Fig 4.** Barplot para cores do caule
+
 ```{r Fig4, fig.height=4, echo = FALSE, warning = FALSE}
 AlldataSetQuali3 %>% filter(Trait%in%traitsCauleCor, !is.na(Score)) %>% 
-  ggplot(aes(y = N, x = Method, fill = Score)) +
+  ggplot(aes(y = N, x = Data, fill = Score)) +
   geom_bar(stat = "identity", position = "fill") +
   facet_wrap(~Trait, ncol = 2, scales = "fixed") + ylab(NULL) +
   scale_fill_viridis_d() + theme_bw() +
   theme(axis.text.x = element_text(angle = 320, hjust = 0.1,
-                                   colour = c("blue", rep("red", 3), rep("green", 9))))
+                                   colour = c("blue", "red", "green", "brown")))
 ```
 
 #### **Fig 5.** Barplot para o segundo grupo de características morfológicas do caule
+
 ```{r Fig5, fig.height=6, echo = FALSE, warning = FALSE}
 AlldataSetQuali3 %>% filter(Trait%in%traitsCaule2, !is.na(Score)) %>% 
-  ggplot(aes(y = N, x = Method, fill = Score)) +
+  ggplot(aes(y = N, x = Data, fill = Score)) +
   geom_bar(stat = "identity", position = "fill") +
   facet_wrap(~Trait, ncol = 2, scales = "fixed") + ylab(NULL) +
   scale_fill_viridis_d() + theme_bw() +
   theme(axis.text.x = element_text(angle = 320, hjust = 0.1,
-                                   colour = c("blue", rep("red", 3), rep("green", 9))))
+                                   colour = c("blue", "red", "green", "brown")))
 ```
 
 #### **Fig 6.** Barplot para Angulo de Ramificação das hastes do caule
+
 ```{r Fig6, fig.height=3.1, echo = FALSE, warning = FALSE}
 AlldataSetQuali3 %>% filter(Trait == "AnguloRamif", !is.na(Score)) %>% 
-  ggplot(aes(y = N, x = Method, fill = Score)) +
+  ggplot(aes(y = N, x = Data, fill = Score)) +
   geom_bar(stat = "identity", position = "fill") +
   facet_wrap(~Trait, ncol = 2, scales = "fixed") + ylab(NULL) +
   scale_fill_viridis_d(guide = guide_legend(ncol = 2)) + theme_bw() +
   theme(axis.text.x = element_text(angle = 320, hjust = 0.1,
-                                   colour = c("blue", rep("red", 3), rep("green", 9))))
+                                   colour = c("blue", "red", "green", "brown")))
 ```
-
 
 #### **Fig 7.** Barplot de características morfológicas do Limbo foliar
 
 ```{r Fig7, fig.height=6, echo = FALSE, warning = FALSE}
 AlldataSetQuali3 %>% filter(Trait%in%traitsFolhaLimbo, !is.na(Score)) %>% 
-  ggplot(aes(y = N, x = Method, fill = Score)) +
+  ggplot(aes(y = N, x = Data, fill = Score)) +
   geom_bar(stat = "identity", position = "fill") +
   facet_wrap(~Trait, ncol = 2, scales = "fixed") + ylab(NULL) +
   scale_fill_viridis_d() + theme_bw() +
   theme(axis.text.x = element_text(angle = 320, hjust = 0.1,
-                                   colour = c("blue", rep("red", 3), rep("green", 9))))
+                                   colour = c("blue", "red", "green", "brown")))
 ```
 
 #### **Fig 8.** Barplot de características morfológicas do pecíolo da folha
 
 ```{r Fig8, fig.height=6, echo = FALSE, warning = FALSE}
 AlldataSetQuali3 %>% filter(Trait%in%traitsFolhaPecio, !is.na(Score)) %>% 
-  ggplot(aes(y = N, x = Method, fill = Score)) +
+  ggplot(aes(y = N, x = Data, fill = Score)) +
   geom_bar(stat = "identity", position = "fill") +
   facet_wrap(~Trait, ncol = 2, scales = "fixed") + ylab(NULL) +
   scale_fill_viridis_d() + theme_bw() +
   theme(axis.text.x = element_text(angle = 320, hjust = 0.1,
-                                   colour = c("blue", rep("red", 3), rep("green", 9))))
+                                   colour = c("blue", "red", "green", "brown")))
 ```
 
 #### **Fig 9.** Barplot de cor e facilidade de destaque de epiderme da raiz
 
 ```{r Fig9, fig.height=6, echo = FALSE, warning = F}
 AlldataSetQuali3 %>% filter(Trait%in%traitsRaizCor, !is.na(Score)) %>% 
-  ggplot(aes(y = N, x = Method, fill = Score)) +
+  ggplot(aes(y = N, x = Data, fill = Score)) +
   geom_bar(stat = "identity", position = "fill") +
   facet_wrap(~Trait, ncol = 2, scales = "fixed") + ylab(NULL) +
   scale_fill_viridis_d() + theme_bw() +
   theme(axis.text.x = element_text(angle = 320, hjust = 0.1,
-                                   colour = c("blue", rep("red", 3), rep("green", 9))))
+                                   colour = c("blue", "red", "green", "brown")))
 ```
 
 #### **Fig 10.** Barplot de características morfológicas de raiz
 
 ```{r Fig10, fig.height=6, echo = FALSE, warning = FALSE}
 AlldataSetQuali3 %>% filter(Trait%in%traitsRaizFor, !is.na(Score)) %>% 
-  ggplot(aes(y = N, x = Method, fill = Score)) +
+  ggplot(aes(y = N, x = Data, fill = Score)) +
   geom_bar(stat = "identity", position = "fill") +
   facet_wrap(~Trait, ncol = 2, scales = "fixed") + ylab(NULL) +
   scale_fill_viridis_d() + theme_bw() +
   theme(axis.text.x = element_text(angle = 320, hjust = 0.1,
-                                   colour = c("blue", rep("red", 3), rep("green", 9))))
+                                   colour = c("blue", "red", "green", "brown")))
 ```
 
-Back - [Coleções Nucleares Genotípicas](CNGeno.html)
+Back - [Coleções Nucleares](CCs.html)
 
 Next - [Estimativas de Diversidade genética](DivGen.html)
 

@@ -21,15 +21,11 @@ Objetivos
   
 Material e métodos
 ==================
-### [Dados Fenotípicos - Seleção](PhenoData.html)
+### [Dados Fenotípicos - Seleção](PhenoGenoData.html)
 
 Primeiro iremos realizar uma seleção prévia das características quanto a variabilidade genética
 
-### [Dados Moleculares - Seleção](GenoData.html)
-
-### [Coleções Nucleares Fenotípicas](CCPheno.html)
-
-### [Coleções Nucleares Genotípicas](CCGeno.html)
+### [Coleções Nucleares Fenotípicas](CCs.html)
 
 ### [Análises Discriminantes](AnDis.html)
 

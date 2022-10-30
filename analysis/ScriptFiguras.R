@@ -4,10 +4,10 @@
 tiff(filename = "output/Figures/BoxPlots.tiff", res = 400, units = "cm",
      compression = "lzw", width = 15, height = 15)
 AlldataSetQuant3 %>% filter(Trait != "ComprFilotaxia") %>%
-  ggplot(mapping = aes(y = Value2, x = Method)) + theme_bw() +
+  ggplot(mapping = aes(y = Value2, x = Data)) + theme_bw() +
   geom_boxplot(fill = "green") + facet_wrap(~Trait, scales = "free_y", ncol = 4) + ylab(NULL) +
   theme(axis.text.x = element_text(angle = 320, hjust = 0.1,
-                                   colour = c("blue", "red", rep("green", 2), "black")))
+                                   colour = c("blue", "red", "green", "brown")))
 dev.off()
 
 
@@ -16,12 +16,12 @@ dev.off()
 tiff(filename = "output/Figures/BarPlots.tiff", res = 400, units = "cm",
      compression = "lzw", width = 15, height = 25)
 AlldataSetQuali3 %>% filter(Trait != "AnguloRamif", !is.na(Score)) %>%
-  ggplot(aes(y = N, x = Method, fill = Score)) +
+  ggplot(aes(y = N, x = Data, fill = Score)) +
   geom_bar(stat = "identity", position = "fill") +
   facet_wrap(~Trait, ncol = 4, scales = "fixed") + ylab(NULL) +
   scale_fill_viridis_d() + theme_bw() +
   theme(axis.text.x = element_text(angle = 320, hjust = 0.1,
-                                   colour = c("blue", "red", rep("green", 2), "black")),
+                                   colour = c("blue", "red", "green", "brown")),
         legend.position = "bottom")
 dev.off()
 
@@ -30,38 +30,27 @@ dev.off()
 tiff(filename = "output/Figures/BarPlotHabCaule.tiff", res = 400, units = "cm",
      compression = "lzw", width = 15, height = 10)
 AlldataSetQuali3 %>% filter(Trait == "AnguloRamif", !is.na(Score)) %>%
-  ggplot(aes(y = N, x = Method, fill = Score)) +
+  ggplot(aes(y = N, x = Data, fill = Score)) +
   geom_bar(stat = "identity", position = "fill") +
   facet_wrap(~Trait, ncol = 4, scales = "fixed") + ylab(NULL) +
   scale_fill_viridis_d(guide = guide_legend(ncol = 2)) + theme_bw() +
   theme(axis.text.x = element_text(angle = 320, hjust = 0.1,
-                                   colour = c("blue", "red", rep("green", 2), "black")))
+                                   colour = c("blue", "red", "green", "brown")))
 dev.off()
 
 
 ### Kappa Correlogram DivGen Rmd
 tiff(filename = "output/Figures/KappaGraph.tiff", res = 400, units = "cm",
      compression = "lzw", width = 12, height = 12)
-corrplot::corrplot(Kappa,cl.pos = "n", tl.col = c(rep("red", times = 3),
-                                                  rep("green", times = 9))) |>
-  corrplot::corrRect(c(1, 4, 8, 9, 10, 12)) |>
-  corrplot::corrRect(namesMat = r)
+corrplot::corrplot(Kappa,cl.pos = "n", tl.col = c("brown", "red", "green"))
 dev.off()
 
 
 ### Venn Diagrams DivGen Rmd
 tiff(filename = "output/Figures/VennDiagram.tiff", res = 400, units = "cm",
      compression = "lzw", width = 20, height = 25)
-ggarrange(VD1, VD3, VD2, ncol = 1, labels = "AUTO", heights = c(2.3,2.3,2))
+VD1
 dev.off()
-
-
-### Venn Diagrams DivGen Rmd
-tiff(filename = "output/Figures/VennDiagramFinal.tiff", res = 400, units = "cm",
-     compression = "lzw", width = 12, height = 12)
-VDFinal
-dev.off()
-
 
 
 ### PCA accumulated variances

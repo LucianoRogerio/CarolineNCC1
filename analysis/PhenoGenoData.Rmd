@@ -1,5 +1,5 @@
 ---
-title: "PhenoData"
+title: "Pheno and Geno Data"
 author: "LucianoRogerio; Caroline Cardoso"
 date: "2021-10-25"
 output: workflowr::wflow_html
@@ -340,11 +340,44 @@ for(i in traits){
     AllDataInfo[,i][is.na(AllDataInfo[,i])] <- mean(AllDataInfo[,i], na.rm = TRUE)
   }
 }
-
-saveRDS(AllDataInfo, file = here::here("output", "DataSelPreparedCar.rds"))
 ```
 
+# Preparar os Dados Genotipicos
 
-Next - [Dados Moleculares - Seleção](GenoData.html)
+A matrix de marcadores do arquivo `DadosGBSCaroline.rds` possui 1,446 clones e 72,023 marcadores SNPs em formato de haplótipos (A, T, C, G, K, M, R, S, Y, W), temos que transformar para dose alélica.
+
+## Tranformando a matrix para Dosagem alélica
+
+```{r Transformar Matriz para Dosagem Alelica, eval = F}
+library(tidyverse); library(data.table)
+
+GBSDataCar <- readRDS("data/DadosGBSCaroline.rds")
+
+GBSDataCar2 <- GBSDataCar[rownames(GBSDataCar) %in% AllDataInfo$Acessos, ]
+
+AllDataInfo2 <- AllDataInfo[AllDataInfo$Acessos %in% rownames(GBSDataCar2),]
+AllDataInfo2 <- AllDataInfo2[order(AllDataInfo2$Acessos),] 
+rownames(AllDataInfo2) <- AllDataInfo2$Acessos
+AllDataInfo2$Acessos <- NULL
+
+saveRDS(AllDataInfo2, file = here::here("output", "DataSelPreparedCar.rds"))
+```
+
+## Controle de qualidade de Marcadores SNPs - MAF
+
+```{r MAF, eval = F}
+Freq <- colMeans(GBSDataCar2, na.rm = T)/2
+
+MAF <- Freq
+for(i in 1:length(MAF)){
+  if(MAF[i] >0.5){MAF[i] <- 1 - MAF[i]} else {MAF[i] <- MAF[i]}
+}
+
+GBSDataCar2 <- as.data.frame(GBSDataCar2[order(rownames(GBSDataCar2)),(MAF >= sqrt(1/nrow(GBSDataCar2)))])
+
+saveRDS(GBSDataCar2, file = here::here("data", "DadosGBSCaroline2.rds"))
+```
+
+Next - [Coleções Nucleares](CC.html)
 
 [Home](index.html)
